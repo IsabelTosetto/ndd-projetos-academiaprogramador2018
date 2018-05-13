@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace DonaLaura.Domain.Common
 {
-    class Entity
+    public abstract class Entity
     {
+        protected int Id { get; set; }
+
+        protected abstract void Validate();
     }
 }
