@@ -46,5 +46,33 @@ namespace DonaLaura.Common.Tests.Features
                 ExpirationDate = DateTime.Now.AddMonths(4)
             };
         }
+
+        public static Product GetProductWithInvalidCostPrice()
+        {
+            return new Product()
+            {
+                Id = 1,
+                Name = "Rice",
+                SalePrice = 2,
+                CostPrice = 4,
+                Disponibility = true,
+                FabricationDate = DateTime.Now,
+                ExpirationDate = DateTime.Now.AddMonths(4)
+            };
+        }
+
+        public static Product GetProductWithInvalidExpirationDate()
+        {
+            return new Product()
+            {
+                Id = 1,
+                Name = "Rice",
+                SalePrice = 6,
+                CostPrice = 4,
+                Disponibility = true,
+                FabricationDate = DateTime.Now,
+                ExpirationDate = DateTime.Now.AddMonths(-4)
+            };
+        }
     }
 }

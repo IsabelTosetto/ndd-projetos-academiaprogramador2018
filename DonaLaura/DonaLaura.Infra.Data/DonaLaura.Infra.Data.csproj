@@ -41,11 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Products\ProductSqlRepository.cs" />
+    <Compile Include="Features\Sales\SaleSqlRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Sales\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DonaLaura.Domain\DonaLaura.Domain.csproj">
       <Project>{eca39679-4ad7-4c6b-8796-def4f59552c1}</Project>

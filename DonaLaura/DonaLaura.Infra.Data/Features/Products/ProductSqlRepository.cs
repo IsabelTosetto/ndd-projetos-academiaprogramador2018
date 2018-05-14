@@ -1,4 +1,5 @@
-﻿using DonaLaura.Domain.Features.Products;
+﻿using DonaLaura.Domain.Exceptions;
+using DonaLaura.Domain.Features.Products;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,7 +13,7 @@ namespace DonaLaura.Infra.Data.Features.Products
     {
         public Product Save(Product product)
         {
-            //product.Validate();
+            product.Validate();
 
             string sql = "INSERT INTO TBProduct(Name, SalePrice, CostPrice, Disponibility, FabricationDate, ExpirationDate) " +
                 "VALUES (@Name, @SalePrice, @CostPrice, @Disponibility, @FabricationDate, @ExpirationDate)";
@@ -23,7 +24,16 @@ namespace DonaLaura.Infra.Data.Features.Products
 
         public Product Update(Product product)
         {
-            throw new NotImplementedException();
+            if (product.Id < 1)
+                throw new IdentifierUndefinedException();
+
+            product.Validate();
+
+            string sql = "UPDATE TBProduct SET Name = @Name, SalePrice = @SalePrice, CostPrice = @CostPrice," +
+                " Disponibility = @Disponibility, FabricationDate = @FabricationDate, ExpirationDate = @ExpirationDate WHERE Id = @Id";
+            Db.Update(sql, Take(product));
+
+            return product;
         }
 
         public void Delete(Product product)
