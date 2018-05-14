@@ -9,14 +9,23 @@ namespace DonaLaura.Common.Tests.Base
 {
     public static class BaseSqlTest
     {
-        private const string RECREATE_POST_TABLE = "TRUNCATE TABLE [dbo].[TBProduct]";
-        private const string INSERT_POST = "INSERT INTO TBProduct(Name,SalePrice,CostPrice,Disponibility,FabricationDate,ExpirationDate) " +
+        private const string RECREATE_SALE_TABLE =
+            "TRUNCATE TABLE [dbo].[TBSale];";
+
+        private const string RECREATE_PRODUCT_TABLE = 
+            "DELETE TABLE [dbo].[TBProduct] WHERE Id=1";
+
+        private const string INSERT_PRODUCT = "INSERT INTO TBProduct(Name,SalePrice,CostPrice,Disponibility,FabricationDate,ExpirationDate) " +
             "VALUES ('Produto Teste', 6, 4, 1, GETDATE(), GETDATE())";
+
+        private const string INSERT_SALE = "INSERT INTO TBSale (ProductId,ClientName,Quantity,Lucre) VALUES (1, 'Nome Teste', 2, 2)";
 
         public static void SeedDatabase()
         {
-            Db.Update(RECREATE_POST_TABLE);
-            Db.Update(INSERT_POST);
+            Db.Update(RECREATE_SALE_TABLE);
+            Db.Update(RECREATE_PRODUCT_TABLE);
+            Db.Update(INSERT_PRODUCT);
+            Db.Update(INSERT_SALE);
         }
     }
 }
