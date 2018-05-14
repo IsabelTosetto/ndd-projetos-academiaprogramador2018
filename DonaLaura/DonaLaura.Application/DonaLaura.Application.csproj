@@ -40,11 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Products\IProductService.cs" />
+    <Compile Include="Features\Sales\ISaleService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Features\Products\" />
-    <Folder Include="Features\Sales\" />
+    <ProjectReference Include="..\DonaLaura.Domain\DonaLaura.Domain.csproj">
+      <Project>{eca39679-4ad7-4c6b-8796-def4f59552c1}</Project>
+      <Name>DonaLaura.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

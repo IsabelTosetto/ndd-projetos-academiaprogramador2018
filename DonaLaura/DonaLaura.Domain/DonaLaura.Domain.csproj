@@ -44,11 +44,17 @@
     <Compile Include="Exceptions\BusinessException.cs" />
     <Compile Include="Exceptions\IdentifierUndefinedException.cs" />
     <Compile Include="Exceptions\UnsupportedOperationException.cs" />
+    <Compile Include="Features\Products\IProductRepository.cs" />
+    <Compile Include="Features\Products\Product.cs" />
+    <Compile Include="Features\Products\ProductCostPriceBiggerThanSalePriceException.cs" />
+    <Compile Include="Features\Products\ProductDateOverFlowException.cs" />
+    <Compile Include="Features\Products\ProductNameLessThan4Exception.cs" />
+    <Compile Include="Features\Products\ProductNameNullOrEmptyException.cs" />
+    <Compile Include="Features\Products\ProductSalePriceNullException.cs" />
+    <Compile Include="Features\Sales\ISaleRepository.cs" />
+    <Compile Include="Features\Sales\Sale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Products\" />
-    <Folder Include="Features\Sales\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

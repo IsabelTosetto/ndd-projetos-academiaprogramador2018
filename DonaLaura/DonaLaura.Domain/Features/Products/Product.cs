@@ -1,24 +1,68 @@
 ﻿using DonaLaura.Domain.Common;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DonaLaura.Domain.Features.Products
 {
     public class Product : Entity
     {
-        private string Name { get; set; }
-        private double SalePrice { get; set; }
-        private double PriceCusto { get; set; }
-        private bool Disponibility { get; set; }
-        private DateTime FabricationDate { get; set; }
-        private DateTime ValidateDate { get; set; }
+        public string Name { get; set; }
+        public double SalePrice { get; set; }
+        public double CostPrice { get; set; }
+        public bool Disponibility { get; set; }
+        public DateTime FabricationDate { get; set; }
+        public DateTime ExpirationDate { get; set; }
 
-        protected override void Validate()
+        public override void Validate()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(Name))
+                throw new ProductNameNullOrEmptyException();
+
+            if (Name.Length < 4)
+                throw new ProductNameLessThan4Exception();
+
+            if (SalePrice < 1)
+                throw new ProductSalePriceNullException();
+
+            if (!ValidateCostPrice())
+                throw new ProductCostPriceBiggerThanSalePriceException();
+
+            if (!CompareDateSmallerCurrent(FabricationDate))
+                throw new ProductDateOverFlowException();
+
+            if (!ValidateExpirationDate())
+                throw new ProductDateOverFlowException();
+        }
+
+
+        private bool ValidateCostPrice()
+        {
+            if(CostPrice < SalePrice)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private bool CompareDateSmallerCurrent(DateTime dt)
+        {
+            int result = DateTime.Compare(dt, DateTime.Now);
+            if (result <= 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool ValidateExpirationDate()
+        {
+            int result = DateTime.Compare(FabricationDate, ExpirationDate);
+            if (result <= 0)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
