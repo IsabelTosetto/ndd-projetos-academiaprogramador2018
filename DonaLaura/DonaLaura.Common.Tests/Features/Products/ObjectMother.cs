@@ -2,7 +2,7 @@
 using System;
 
 
-namespace DonaLaura.Common.Tests.Features
+namespace DonaLaura.Common.Tests.Features.Products
 {
     public static partial class ObjectMother
     {

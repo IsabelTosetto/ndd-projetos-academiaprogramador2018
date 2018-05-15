@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Products\ProductServiceTest.cs" />
+    <Compile Include="Features\Sales\SaleServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

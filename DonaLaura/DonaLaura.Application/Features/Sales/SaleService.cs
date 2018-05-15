@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DonaLaura.Domain.Exceptions;
 using DonaLaura.Domain.Features.Sales;
 
 namespace DonaLaura.Application.Features.Sales
@@ -18,27 +19,40 @@ namespace DonaLaura.Application.Features.Sales
 
         public Sale Add(Sale sale)
         {
-            throw new NotImplementedException();
-        }
+            sale.Validate();
 
-        public void Delete(Sale sale)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Sale Get(long id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Sale> GetAll()
-        {
-            throw new NotImplementedException();
+            return _repositorio.Save(sale);
         }
 
         public Sale Update(Sale sale)
         {
-            throw new NotImplementedException();
+            if (sale.Id < 1)
+                throw new IdentifierUndefinedException();
+
+            sale.Validate();
+
+            return _repositorio.Update(sale);
+        }
+
+        public Sale Get(long id)
+        {
+            if (id < 1)
+                throw new IdentifierUndefinedException();
+
+            return _repositorio.Get(id);
+        }
+
+        public IEnumerable<Sale> GetAll()
+        {
+            return _repositorio.GetAll();
+        }
+        
+        public void Delete(Sale sale)
+        {
+            if (sale.Id < 1)
+                throw new IdentifierUndefinedException();
+
+            _repositorio.Delete(sale);
         }
     }
 }

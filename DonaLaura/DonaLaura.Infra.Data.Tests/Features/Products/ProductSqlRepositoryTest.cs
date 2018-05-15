@@ -1,5 +1,5 @@
 ﻿using DonaLaura.Common.Tests.Base;
-using DonaLaura.Common.Tests.Features;
+using DonaLaura.Common.Tests.Features.Products;
 using DonaLaura.Domain.Exceptions;
 using DonaLaura.Domain.Features.Products;
 using DonaLaura.Infra.Data.Features.Products;

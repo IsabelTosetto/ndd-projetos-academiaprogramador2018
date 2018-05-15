@@ -9,7 +9,7 @@ using DonaLaura.Domain.Features.Products;
 using DonaLaura.Application.Features.Products;
 using FluentAssertions;
 using DonaLaura.Domain.Exceptions;
-using DonaLaura.Common.Tests.Features;
+using DonaLaura.Common.Tests.Features.Products;
 
 namespace DonaLaura.Application.Tests.Features.Products
 {
