@@ -36,19 +36,31 @@ namespace DonaLaura.Infra.Data.Features.Products
             return product;
         }
 
-        public void Delete(Product product)
-        {
-            throw new NotImplementedException();
-        }
-
         public Product Get(long id)
         {
-            throw new NotImplementedException();
+            if (id < 1)
+                throw new IdentifierUndefinedException();
+
+            string sql = "SELECT * FROM TBProduct WHERE Id = @Id";
+            
+            return Db.Get(sql, Make, new object[] { "@Id", id });
         }
 
         public IEnumerable<Product> GetAll()
         {
-            throw new NotImplementedException();
+            string sql = "SELECT * FROM TBProduct";
+
+            return Db.GetAll(sql, Make);
+        }
+        
+        public void Delete(Product product)
+        {
+            string sql = "DELETE FROM TBProduct WHERE Id = @Id";
+
+            if (product.Id < 1)
+                throw new IdentifierUndefinedException();
+
+            Db.Delete(sql, new object[] { "@Id", product.Id });
         }
 
         /// <summary>

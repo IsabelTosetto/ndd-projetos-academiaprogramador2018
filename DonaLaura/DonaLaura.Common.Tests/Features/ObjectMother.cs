@@ -19,20 +19,6 @@ namespace DonaLaura.Common.Tests.Features
             };
         }
 
-        public static Product GetProductComplete()
-        {
-            return new Product()
-            {
-                Id = 1,
-                Name = "Rice",
-                SalePrice = 6,
-                CostPrice = 4,
-                Disponibility = true,
-                FabricationDate = DateTime.Now,
-                ExpirationDate = DateTime.Now.AddMonths(4)
-            };
-        }
-
         public static Product GetProductWithInvalidName()
         {
             return new Product()

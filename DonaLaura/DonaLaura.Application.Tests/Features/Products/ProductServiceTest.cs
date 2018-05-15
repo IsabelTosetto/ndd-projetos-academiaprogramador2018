@@ -229,7 +229,8 @@ namespace DonaLaura.Application.Tests.Features.Products
             // Início Cenário
 
             //Modelo
-            Product modelo = ObjectMother.GetProductComplete();
+            Product modelo = ObjectMother.GetProduct();
+            modelo.Id = 1;
             //Mock
             _mockRepository.Setup(m => m.Update(modelo)).Returns(new Product()
             {
@@ -357,7 +358,8 @@ namespace DonaLaura.Application.Tests.Features.Products
             // Início Cenário
 
             //Modelo
-            Product modelo = ObjectMother.GetProductComplete();
+            Product modelo = ObjectMother.GetProduct();
+            modelo.Id = 1;
             //Mock
             _mockRepository.Setup(m => m.Delete(modelo));
 

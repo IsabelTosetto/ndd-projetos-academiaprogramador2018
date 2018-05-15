@@ -1,5 +1,6 @@
 ﻿using DonaLaura.Common.Tests.Base;
 using DonaLaura.Common.Tests.Features;
+using DonaLaura.Domain.Exceptions;
 using DonaLaura.Domain.Features.Products;
 using DonaLaura.Infra.Data.Features.Products;
 using FluentAssertions;
@@ -89,6 +90,91 @@ namespace DonaLaura.Infra.Data.Tests.Features.Products
             //Verifica
             Product productEdited = _repository.Get(product.Id);
             productEdited.Name.Should().Be(product.Name);
+        }
+
+        [Test]
+        public void ProductSqlRepository_Update_Invalid_Id_ShouldBeFail()
+        {
+            //Cenario
+            Product product = ObjectMother.GetProduct();
+            product.Id = 0;
+            
+            //Executa
+            Action comparison = () => _repository.Update(product);
+
+            //Saída
+            comparison.Should().Throw<IdentifierUndefinedException>();
+        }
+
+        [Test]
+        public void ProductSqlRepository_Update_Name_NullOrEmpty_ShouldBeFail()
+        {
+            //Cenario
+            Product product = ObjectMother.GetProductWithInvalidName();
+            product.Id = 1;
+
+            //Executa
+            Action comparison = () => _repository.Update(product);
+
+            comparison.Should().Throw<ProductNameNullOrEmptyException>();
+        }
+
+        [Test]
+        public void ProductSqlRepository_Get_ShouldBeOK()
+        {
+            //Executa
+            Product resultado = _repository.Get(1);
+
+            //Verifica
+            resultado.Should().NotBeNull();
+        }
+
+        [Test]
+        public void ProductSqlRepository_Get_Invalid_Id_ShouldBeFail()
+        {
+            //Executa
+            Action comparison = () => _repository.Get(-1);
+
+            //Saída
+            comparison.Should().Throw<IdentifierUndefinedException>();
+        }
+
+        [Test]
+        public void ProductSqlRepository_GetAll_ShoulBeOK()
+        {
+            //Executa
+            IEnumerable<Product> resultado = _repository.GetAll();
+
+            //Verifica
+            resultado.Count().Should().BeGreaterThan(0);
+        }
+
+        [Test]
+        public void ProductSqlRepository_Delete_ShoulBeOK()
+        {
+            //Cenario
+            Product product = ObjectMother.GetProduct();
+            product.Id = 1;
+
+            //Executa
+            _repository.Delete(product);
+            Product deleteObject = _repository.Get(1);
+
+            //Verifica
+            deleteObject.Should().BeNull();
+        }
+
+        [Test]
+        public void ProductSqlRepository_Delete_ShoulBeFail()
+        {
+            //Cenario
+            Product post = ObjectMother.GetProduct();
+
+            //Executa
+            Action comparison = () => _repository.Delete(post);
+
+            //Saída
+            comparison.Should().Throw<IdentifierUndefinedException>();
         }
 
         [TearDown]
