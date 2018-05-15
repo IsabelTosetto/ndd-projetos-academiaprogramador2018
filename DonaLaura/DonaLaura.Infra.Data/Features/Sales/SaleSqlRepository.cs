@@ -44,8 +44,7 @@ namespace DonaLaura.Infra.Data.Features.Sales
                Id = Convert.ToInt32(reader["Id"]),
                //produto.Id
                ClientName = reader["Name"].ToString(),
-               Quantity = Convert.ToInt32(reader["Quantity"]),
-               Lucre = Convert.ToDouble(reader["Lucre"])
+               Quantity = Convert.ToInt32(reader["Quantity"])
            };
 
         /// <summary>
@@ -57,7 +56,7 @@ namespace DonaLaura.Infra.Data.Features.Sales
         {
             object[] parametros = null;
 
-            if (true)
+            if (hasId)
             {
                 parametros = new object[]
                 {

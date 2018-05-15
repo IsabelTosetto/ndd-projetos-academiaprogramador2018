@@ -87,7 +87,7 @@ namespace DonaLaura.Infra.Data.Features.Products
         {
             object[] parametros = null;
 
-            if (true)
+            if (hasId)
             {
                 parametros = new object[]
                 {

@@ -9,11 +9,21 @@ namespace DonaLaura.Domain.Features.Sales
         public Product Product { get; set; }
         public string ClientName { get; set; }
         public int Quantity { get; set; }
-        public double Lucre { get; set; }
+        public double Lucre
+        {
+            get
+            {
+                return (Product.SalePrice - Product.CostPrice) * Quantity;
+            }
+        }
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(ClientName))
+                throw new SaleClientNameNullOrEmptyException();
+
+            if (Quantity < 1)
+                throw new SaleQuantityLessThan1Exception();
         }
     }
 }
