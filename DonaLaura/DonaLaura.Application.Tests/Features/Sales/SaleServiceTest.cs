@@ -156,6 +156,23 @@ namespace DonaLaura.Application.Tests.Features.Sales
         }
 
         [Test]
+        public void SaleService_Update_Invalid_Id_ShouldBeFail()
+        {
+            // Inicio Cenario
+
+            //Serviço
+            SaleService service = new SaleService(_mockRepository.Object);
+            // Fim Cenario
+
+            //Executa
+            Action comparison = () => service.Update(ObjectMother.GetSale());
+
+            //Saída
+            comparison.Should().Throw<IdentifierUndefinedException>();
+            _mockRepository.VerifyNoOtherCalls();
+        }
+
+        [Test]
         public void SaleService_Update_ClientName_NullOrEmpty_ShouldBeFail()
         {
             // Início Cenário

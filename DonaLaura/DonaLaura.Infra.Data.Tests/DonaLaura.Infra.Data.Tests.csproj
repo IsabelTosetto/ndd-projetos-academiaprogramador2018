@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Products\ProductSqlRepositoryTest.cs" />
+    <Compile Include="Features\Sales\SaleSqlRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
