@@ -54,6 +54,7 @@
     <Compile Include="Features\Sales\ISaleRepository.cs" />
     <Compile Include="Features\Sales\Sale.cs" />
     <Compile Include="Features\Sales\SaleClientNameNullOrEmptyException.cs" />
+    <Compile Include="Features\Sales\SaleProductUnavailableException.cs" />
     <Compile Include="Features\Sales\SaleQuantityLessThan1Exception.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

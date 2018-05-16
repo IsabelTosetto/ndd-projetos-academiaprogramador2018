@@ -88,6 +88,64 @@ namespace DonaLaura.Application.Tests.Features.Sales
         }
 
         [Test]
+        public void SaleService_Add_Product_Unavailable_ShouldBeFail()
+        {
+            // Inicio Cenário
+
+            //Modelo
+            Sale modelo = ObjectMother.GetSale();
+            modelo.Product = new Product
+            {
+                Id = 1,
+                Name = "Rice",
+                SalePrice = 6,
+                CostPrice = 2,
+                Disponibility = false,
+                FabricationDate = DateTime.Now,
+                ExpirationDate = DateTime.Now.AddMonths(4)
+            };
+            //Serviço
+            SaleService service = new SaleService(_mockRepository.Object);
+            // Fim Cenário
+
+            //Executa
+            Action comparison = () => service.Add(modelo);
+
+            //Saída
+            comparison.Should().Throw<SaleProductUnavailableException>();
+            _mockRepository.VerifyNoOtherCalls();
+        }
+
+        [Test]
+        public void SaleService_Add_Product_ExpirationDate_ShouldBeFail()
+        {
+            // Inicio Cenário
+
+            //Modelo
+            Sale modelo = ObjectMother.GetSale();
+            modelo.Product = new Product
+            {
+                Id = 1,
+                Name = "Rice",
+                SalePrice = 6,
+                CostPrice = 2,
+                Disponibility = true,
+                FabricationDate = DateTime.Now,
+                ExpirationDate = DateTime.Now.AddMonths(-1)
+            };
+            //Serviço
+            SaleService service = new SaleService(_mockRepository.Object);
+            // Fim Cenário
+
+            //Executa
+            Action comparison = () => service.Add(modelo);
+
+            //Saída
+            comparison.Should().Throw<SaleProductUnavailableException>();
+            _mockRepository.VerifyNoOtherCalls();
+        }
+
+        [Test]
         public void SaleService_Add_Quantity_LessThan1_ShouldBeFail()
         {
             // Inicio Cenário

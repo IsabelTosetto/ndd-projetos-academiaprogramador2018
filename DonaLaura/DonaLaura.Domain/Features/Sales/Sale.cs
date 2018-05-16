@@ -24,6 +24,12 @@ namespace DonaLaura.Domain.Features.Sales
 
             if (Quantity < 1)
                 throw new SaleQuantityLessThan1Exception();
+
+            if (Product.Disponibility == false)
+                throw new SaleProductUnavailableException();
+
+            if(Product.ExpirationDate < DateTime.Now)
+                throw new SaleProductUnavailableException();
         }
 
         public double CalculateLucre()
