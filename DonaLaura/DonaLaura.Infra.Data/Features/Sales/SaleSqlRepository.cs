@@ -1,4 +1,5 @@
 ﻿using DonaLaura.Domain.Exceptions;
+using DonaLaura.Domain.Features.Products;
 using DonaLaura.Domain.Features.Sales;
 using System;
 using System.Collections.Generic;
@@ -37,12 +38,38 @@ namespace DonaLaura.Infra.Data.Features.Sales
 
         public Sale Get(long id)
         {
-            throw new NotImplementedException();
+            if (id < 1)
+                throw new IdentifierUndefinedException();
+
+            string sql = @"SELECT
+                S.Id,
+                S.ClientName,
+                S.Quantity,
+                P.Id AS ProductId,
+			    P.Name AS ProductName
+            FROM
+                TBSale AS S
+				INNER JOIN
+				TBProduct AS P ON P.Id = S.ProductId
+            WHERE S.Id = @Id";
+
+            return Db.Get(sql, Make, new object[] { "@Id", id });
         }
 
         public IEnumerable<Sale> GetAll()
         {
-            throw new NotImplementedException();
+            string sql = @"SELECT
+                S.Id,
+                S.ClientName,
+                S.Quantity,
+			    P.Name AS ProductName,
+                P.Id AS ProductId
+            FROM
+                TBSale AS S
+				INNER JOIN
+				TBProduct AS P ON P.Id = S.ProductId";
+
+            return Db.GetAll(sql, Make);
         }
 
         public void Delete(Sale sale)
@@ -62,9 +89,13 @@ namespace DonaLaura.Infra.Data.Features.Sales
            new Sale
            {
                Id = Convert.ToInt32(reader["Id"]),
-               //Product.Id = Convert.ToInt32(reader["ProductId"]),
-               ClientName = reader["Name"].ToString(),
-               Quantity = Convert.ToInt32(reader["Quantity"])
+               ClientName = reader["ClientName"].ToString(),
+               Quantity = Convert.ToInt32(reader["Quantity"]),
+               Product = new Product
+               {
+                   Id = Convert.ToInt32(reader["ProductId"]),
+                   Name = Convert.ToString(reader["ProductName"])
+               }
            };
 
         /// <summary>

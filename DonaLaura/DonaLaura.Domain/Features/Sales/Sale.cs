@@ -13,7 +13,7 @@ namespace DonaLaura.Domain.Features.Sales
         {
             get
             {
-                return (Product.SalePrice - Product.CostPrice) * Quantity;
+                return CalculateLucre();
             }
         }
 
@@ -24,6 +24,11 @@ namespace DonaLaura.Domain.Features.Sales
 
             if (Quantity < 1)
                 throw new SaleQuantityLessThan1Exception();
+        }
+
+        public double CalculateLucre()
+        {
+            return ((Product.SalePrice - Product.CostPrice) * Quantity);
         }
     }
 }

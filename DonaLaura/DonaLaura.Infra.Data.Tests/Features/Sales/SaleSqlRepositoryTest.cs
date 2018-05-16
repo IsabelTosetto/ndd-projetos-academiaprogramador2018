@@ -170,6 +170,36 @@ namespace DonaLaura.Infra.Data.Tests.Features.Sales
 
             comparison.Should().Throw<SaleQuantityLessThan1Exception>();
         }
+        
+        [Test]
+        public void SaleSqlRepository_Get_ShouldBeOK()
+        {
+            //Executa
+            Sale resultado = _repository.Get(1);
+
+            //Verifica
+            resultado.Should().NotBeNull();
+        }
+
+        [Test]
+        public void SaleSqlRepository_Get_Invalid_Id_ShouldBeFail()
+        {
+            //Executa
+            Action comparison = () => _repository.Get(-1);
+
+            //Saída
+            comparison.Should().Throw<IdentifierUndefinedException>();
+        }
+
+        [Test]
+        public void SaleSqlRepository_GetAll_ShoulBeOK()
+        {
+            //Executa
+            IEnumerable<Sale> resultado = _repository.GetAll();
+
+            //Verifica
+            resultado.Count().Should().BeGreaterThan(0);
+        }
 
         [Test]
         public void SaleSqlRepository_Delete_ShoulBeOK()
