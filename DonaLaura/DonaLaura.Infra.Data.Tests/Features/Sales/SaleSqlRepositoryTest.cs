@@ -53,6 +53,28 @@ namespace DonaLaura.Infra.Data.Tests.Features.Sales
         }
 
         [Test]
+        public void SaleSqlRepository_Save_ProductUnavailable_ShouldBeFail()
+        {
+            //Cenario
+            Sale sale = ObjectMother.GetSale();
+            sale.Product = new Product
+            {
+                Id = 1,
+                Name = "Rice",
+                SalePrice = 6,
+                CostPrice = 2,
+                Disponibility = false,
+                FabricationDate = DateTime.Now,
+                ExpirationDate = DateTime.Now.AddMonths(4)
+            };
+
+            //Executa
+            Action comparison = () => _repository.Save(sale);
+
+            comparison.Should().Throw<SaleProductUnavailableException>();
+        }
+
+        [Test]
         public void SaleSqlRepository_Save_ClientName_NullOrEmpty_ShouldBeFail()
         {
             //Cenario
