@@ -24,13 +24,8 @@ namespace DonaLaura.Domain.Tests.Features.Products
         [Test]
         public void Product_Valid_ShouldBeSuccess()
         {
+            product = ObjectMother.GetProduct();
             product.Id = 1;
-            product.Name = "Rice";
-            product.SalePrice = 6;
-            product.CostPrice = 4;
-            product.Disponibility = true;
-            product.FabricationDate = DateTime.Now;
-            product.ExpirationDate = DateTime.Now.AddMonths(4);
 
             product.Validate();
         }
@@ -38,13 +33,8 @@ namespace DonaLaura.Domain.Tests.Features.Products
         [Test]
         public void Product_Name_NullOrEmpty_ShouldBeFail()
         {
+            product = ObjectMother.GetProductWithInvalidName();
             product.Id = 1;
-            product.Name = "";
-            product.SalePrice = 6;
-            product.CostPrice = 4;
-            product.Disponibility = true;
-            product.FabricationDate = DateTime.Now;
-            product.ExpirationDate = DateTime.Now.AddMonths(4);
 
             Action comparison = product.Validate;
 

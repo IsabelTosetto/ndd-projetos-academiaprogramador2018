@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DonaLaura.Domain.Features.Products;
 using FluentAssertions;
+using DonaLaura.Common.Tests.Features.Sales;
 
 namespace DonaLaura.Domain.Tests.Features.Sales
 {
@@ -28,10 +29,9 @@ namespace DonaLaura.Domain.Tests.Features.Sales
         public void Sale_Validate_ShouldBeSuccess()
         {
             //Cenário
+            sale = ObjectMother.GetSale();
             sale.Id = 1;
             sale.Product = _product.Object;
-            sale.ClientName = "Isabel";
-            sale.Quantity = 2;
 
             _product.Object.Disponibility = true;
             _product.Object.ExpirationDate = DateTime.Now.AddMonths(4);
@@ -44,10 +44,9 @@ namespace DonaLaura.Domain.Tests.Features.Sales
         public void Sale_Validate_ClienteName_NullOrEmpty_ShouldBeFail()
         {
             //Cenário
+            sale = ObjectMother.GetSaleWithInvalidClientName();
             sale.Id = 1;
             sale.Product = _product.Object;
-            sale.ClientName = "";
-            sale.Quantity = 2;
 
             //Executa
             Action comparison = sale.Validate;
@@ -60,10 +59,9 @@ namespace DonaLaura.Domain.Tests.Features.Sales
         public void Sale_Validate_Quantity_LessThan1_ShouldBeFail()
         {
             //Cenário
+            sale = ObjectMother.GetSaleWithInvalidQuantity();
             sale.Id = 1;
             sale.Product = _product.Object;
-            sale.ClientName = "Isabel";
-            sale.Quantity = -2;
 
             //Executa
             Action comparison = sale.Validate;
@@ -71,6 +69,23 @@ namespace DonaLaura.Domain.Tests.Features.Sales
             //Saída
             comparison.Should().Throw<SaleQuantityLessThan1Exception>();
         }
+
+        [Test]
+        public void Sale_Validate_Product_Unavailable_ShouldBeFail()
+        {
+            //Cenário
+            sale = ObjectMother.GetSale();
+            sale.Id = 1;
+            _product.Object.Disponibility = false;
+            sale.Product = _product.Object;
+
+            //Executa
+            Action comparison = sale.Validate;
+
+            //Saída
+            comparison.Should().Throw<SaleProductUnavailableException>();
+        }
+
 
         [Test]
         public void Sale_Validate_Lucre_ShouldBeOk()
