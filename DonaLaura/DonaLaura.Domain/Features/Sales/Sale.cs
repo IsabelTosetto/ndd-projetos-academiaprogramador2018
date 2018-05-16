@@ -32,7 +32,7 @@ namespace DonaLaura.Domain.Features.Sales
                 throw new SaleProductUnavailableException();
         }
 
-        public double CalculateLucre()
+        private double CalculateLucre()
         {
             return ((Product.SalePrice - Product.CostPrice) * Quantity);
         }

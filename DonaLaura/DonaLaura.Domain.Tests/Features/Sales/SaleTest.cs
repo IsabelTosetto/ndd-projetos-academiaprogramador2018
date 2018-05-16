@@ -33,6 +33,9 @@ namespace DonaLaura.Domain.Tests.Features.Sales
             sale.ClientName = "Isabel";
             sale.Quantity = 2;
 
+            _product.Object.Disponibility = true;
+            _product.Object.ExpirationDate = DateTime.Now.AddMonths(4);
+
             //Executa
             sale.Validate();
         }
@@ -78,9 +81,11 @@ namespace DonaLaura.Domain.Tests.Features.Sales
             sale.ClientName = "Isabel";
             sale.Quantity = 2;
 
-            _product.Setup(salePrice => salePrice.SalePrice).Returns(6);
-            _product.Setup(costPrice => costPrice.CostPrice).Returns(2);
+            _product.Object.SalePrice = 6;
+            _product.Object.CostPrice = 2;
             
+            
+
             //Saída
             sale.Lucre.Should().Be(8);
         }

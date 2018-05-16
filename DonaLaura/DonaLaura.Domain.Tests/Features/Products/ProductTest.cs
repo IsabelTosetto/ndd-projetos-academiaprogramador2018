@@ -1,4 +1,5 @@
-﻿using DonaLaura.Domain.Features.Products;
+﻿using DonaLaura.Common.Tests.Features.Products;
+using DonaLaura.Domain.Features.Products;
 using FluentAssertions;
 using NUnit.Framework;
 using System;
@@ -85,13 +86,7 @@ namespace DonaLaura.Domain.Tests.Features.Products
         [Test]
         public void Product_CostPrice_BiggerThanSalePrice_ShouldBeFail()
         {
-            product.Id = 1;
-            product.Name = "Rice";
-            product.SalePrice = 2;
-            product.CostPrice = 4;
-            product.Disponibility = true;
-            product.FabricationDate = DateTime.Now;
-            product.ExpirationDate = DateTime.Now.AddMonths(4);
+            product = ObjectMother.GetProductWithInvalidCostPrice();
 
             Action comparison = product.Validate;
 
@@ -117,13 +112,7 @@ namespace DonaLaura.Domain.Tests.Features.Products
         [Test]
         public void Product_ExpirationDate_LessThanFabricationDate_ShouldBeFail()
         {
-            product.Id = 1;
-            product.Name = "Rice";
-            product.SalePrice = 6;
-            product.CostPrice = 4;
-            product.Disponibility = true;
-            product.FabricationDate = DateTime.Now;
-            product.ExpirationDate = DateTime.Now.AddMonths(-1);
+            product = ObjectMother.GetProductWithInvalidExpirationDate();
 
             Action comparison = product.Validate;
 

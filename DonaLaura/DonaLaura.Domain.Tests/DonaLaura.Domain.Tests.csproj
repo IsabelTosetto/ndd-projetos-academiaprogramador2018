@@ -80,6 +80,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\DonaLaura.Common.Tests\DonaLaura.Common.Tests.csproj">
+      <Project>{D933187A-81AB-49AA-AC8E-01EA9D0B6EAA}</Project>
+      <Name>DonaLaura.Common.Tests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DonaLaura.Domain\DonaLaura.Domain.csproj">
       <Project>{eca39679-4ad7-4c6b-8796-def4f59552c1}</Project>
       <Name>DonaLaura.Domain</Name>

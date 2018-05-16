@@ -59,7 +59,7 @@ namespace DonaLaura.Application.Tests.Features.Sales
         }
 
         [Test]
-        public void SaleService_Add_ClientMame_NullOrEmpty_ShouldBeFail()
+        public void SaleService_Add_ClientName_NullOrEmpty_ShouldBeFail()
         {
             // Inicio Cenário
 

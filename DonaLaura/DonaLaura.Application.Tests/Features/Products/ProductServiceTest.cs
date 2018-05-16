@@ -145,16 +145,7 @@ namespace DonaLaura.Application.Tests.Features.Products
             // Inicio Cenário
 
             //Modelo
-            Product modelo = new Product()
-            {
-                Id = 1,
-                Name = "Rice",
-                SalePrice = 2,
-                CostPrice = 4,
-                Disponibility = true,
-                FabricationDate = DateTime.Now,
-                ExpirationDate = DateTime.Now.AddMonths(4)
-            };
+            Product modelo = ObjectMother.GetProductWithInvalidCostPrice();
             //Serviço
             ProductService service = new ProductService(_mockRepository.Object);
             // Fim Cenário
@@ -201,16 +192,7 @@ namespace DonaLaura.Application.Tests.Features.Products
             // Inicio Cenário
 
             //Modelo
-            Product modelo = new Product()
-            {
-                Id = 1,
-                Name = "Rice",
-                SalePrice = 6,
-                CostPrice = 4,
-                Disponibility = true,
-                FabricationDate = DateTime.Now,
-                ExpirationDate = DateTime.Now.AddMonths(-4)
-            };
+            Product modelo = ObjectMother.GetProductWithInvalidExpirationDate();
             //Serviço
             ProductService service = new ProductService(_mockRepository.Object);
             // Fim Cenário

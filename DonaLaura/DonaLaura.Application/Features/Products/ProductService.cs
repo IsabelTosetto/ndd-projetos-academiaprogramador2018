@@ -10,18 +10,18 @@ namespace DonaLaura.Application.Features.Products
 {
     public class ProductService : IProductService
     {
-        IProductRepository _repositorio;
+        IProductRepository _repository;
 
         public ProductService(IProductRepository repository)
         {
-            _repositorio = repository;
+            _repository = repository;
         }
 
         public Product Add(Product product)
         {
             product.Validate();
 
-            return _repositorio.Save(product);
+            return _repository.Save(product);
         }
         public Product Update(Product product)
         {
@@ -30,7 +30,7 @@ namespace DonaLaura.Application.Features.Products
 
             product.Validate();
 
-            return _repositorio.Update(product);
+            return _repository.Update(product);
         }
 
         public Product Get(long id)
@@ -38,12 +38,12 @@ namespace DonaLaura.Application.Features.Products
             if (id < 1)
                 throw new IdentifierUndefinedException();
 
-            return _repositorio.Get(id);
+            return _repository.Get(id);
         }
 
         public IEnumerable<Product> GetAll()
         {
-            return _repositorio.GetAll();
+            return _repository.GetAll();
         }
 
         public void Delete(Product product)
@@ -51,7 +51,7 @@ namespace DonaLaura.Application.Features.Products
             if (product.Id < 1)
                 throw new IdentifierUndefinedException();
 
-            _repositorio.Delete(product);
+            _repository.Delete(product);
         }
     }
 }
