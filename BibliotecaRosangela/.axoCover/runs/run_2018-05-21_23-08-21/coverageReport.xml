@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="4.6.0.0">
+  <Summary numSequencePoints="21" visitedSequencePoints="21" numBranchPoints="16" visitedBranchPoints="16" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="9" minCyclomaticComplexity="2" maxCrapScore="9" minCrapScore="2" visitedClasses="2" numClasses="2" visitedMethods="2" numMethods="2" />
+  <Modules>
+    <Module hash="74-E2-B1-93-85-6B-DD-D4-C2-F6-9A-FE-81-5C-1A-2F-AD-6C-72-5E">
+      <Summary numSequencePoints="14" visitedSequencePoints="14" numBranchPoints="13" visitedBranchPoints="13" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="9" minCyclomaticComplexity="0" maxCrapScore="9" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+      <ModulePath>C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\BibliotecaRosangela\BibliotecaRosangela.Domain.Test\bin\Debug\BibliotecaRosangela.Domain.dll</ModulePath>
+      <ModuleTime>2018-05-22T02:07:15.924566Z</ModuleTime>
+      <ModuleName>BibliotecaRosangela.Domain</ModuleName>
+      <Files>
+        <File uid="1" fullPath="C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\BibliotecaRosangela\BibliotecaRosangela.Domain\Features\Books\Book.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="14" visitedSequencePoints="14" numBranchPoints="13" visitedBranchPoints="13" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="9" minCyclomaticComplexity="1" maxCrapScore="9" minCrapScore="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>BibliotecaRosangela.Domain.Features.Books.Book</FullName>
+          <Methods>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663297</MetadataToken>
+              <Name>System.Int32 BibliotecaRosangela.Domain.Features.Books.Book::get_Id()</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663298</MetadataToken>
+              <Name>System.Void BibliotecaRosangela.Domain.Features.Books.Book::set_Id(System.Int32)</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663299</MetadataToken>
+              <Name>System.String BibliotecaRosangela.Domain.Features.Books.Book::get_Title()</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663300</MetadataToken>
+              <Name>System.Void BibliotecaRosangela.Domain.Features.Books.Book::set_Title(System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663301</MetadataToken>
+              <Name>System.String BibliotecaRosangela.Domain.Features.Books.Book::get_Theme()</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663302</MetadataToken>
+              <Name>System.Void BibliotecaRosangela.Domain.Features.Books.Book::set_Theme(System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663303</MetadataToken>
+              <Name>System.String BibliotecaRosangela.Domain.Features.Books.Book::get_Author()</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663304</MetadataToken>
+              <Name>System.Void BibliotecaRosangela.Domain.Features.Books.Book::set_Author(System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663305</MetadataToken>
+              <Name>System.Int32 BibliotecaRosangela.Domain.Features.Books.Book::get_Volume()</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663306</MetadataToken>
+              <Name>System.Void BibliotecaRosangela.Domain.Features.Books.Book::set_Volume(System.Int32)</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663307</MetadataToken>
+              <Name>System.DateTime BibliotecaRosangela.Domain.Features.Books.Book::get_PublicationDate()</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663308</MetadataToken>
+              <Name>System.Void BibliotecaRosangela.Domain.Features.Books.Book::set_PublicationDate(System.DateTime)</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663309</MetadataToken>
+              <Name>System.Boolean BibliotecaRosangela.Domain.Features.Books.Book::get_Disponibility()</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663310</MetadataToken>
+              <Name>System.Void BibliotecaRosangela.Domain.Features.Books.Book::set_Disponibility(System.Boolean)</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="9" nPathComplexity="64" sequenceCoverage="100" branchCoverage="100" crapScore="9" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="14" visitedSequencePoints="14" numBranchPoints="13" visitedBranchPoints="13" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="9" minCyclomaticComplexity="9" maxCrapScore="9" minCrapScore="9" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663311</MetadataToken>
+              <Name>System.Void BibliotecaRosangela.Domain.Features.Books.Book::Validate()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="7" uspid="1" ordinal="0" offset="0" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="7" uspid="2" ordinal="1" offset="1" sl="22" sc="13" el="22" ec="108" bec="2" bev="2" fileid="1" />
+                <SequencePoint vc="1" uspid="3" ordinal="2" offset="45" sl="23" sc="17" el="23" ec="59" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="6" uspid="4" ordinal="3" offset="51" sl="25" sc="13" el="25" ec="34" bec="2" bev="2" fileid="1" />
+                <SequencePoint vc="1" uspid="5" ordinal="4" offset="69" sl="26" sc="17" el="26" ec="67" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="6" ordinal="5" offset="75" sl="28" sc="13" el="28" ec="34" bec="2" bev="2" fileid="1" />
+                <SequencePoint vc="1" uspid="7" ordinal="6" offset="93" sl="29" sc="17" el="29" ec="67" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="8" ordinal="7" offset="99" sl="31" sc="13" el="31" ec="35" bec="2" bev="2" fileid="1" />
+                <SequencePoint vc="1" uspid="9" ordinal="8" offset="117" sl="32" sc="17" el="32" ec="68" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="10" ordinal="9" offset="123" sl="34" sc="13" el="34" ec="28" bec="2" bev="2" fileid="1" />
+                <SequencePoint vc="1" uspid="11" ordinal="10" offset="138" sl="35" sc="17" el="35" ec="56" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="2" uspid="12" ordinal="11" offset="144" sl="37" sc="13" el="37" ec="62" bec="2" bev="2" fileid="1" />
+                <SequencePoint vc="1" uspid="13" ordinal="12" offset="164" sl="38" sc="17" el="38" ec="55" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="14" ordinal="13" offset="170" sl="39" sc="9" el="39" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="19" ordinal="4" offset="43" sl="22" path="0" offsetend="45" fileid="1" />
+                <BranchPoint vc="6" uspid="20" ordinal="5" offset="43" sl="22" path="1" offsetend="51" fileid="1" />
+                <BranchPoint vc="1" uspid="21" ordinal="6" offset="67" sl="25" path="0" offsetend="69" fileid="1" />
+                <BranchPoint vc="5" uspid="22" ordinal="7" offset="67" sl="25" path="1" offsetend="75" fileid="1" />
+                <BranchPoint vc="1" uspid="23" ordinal="8" offset="91" sl="28" path="0" offsetend="93" fileid="1" />
+                <BranchPoint vc="4" uspid="24" ordinal="9" offset="91" sl="28" path="1" offsetend="99" fileid="1" />
+                <BranchPoint vc="1" uspid="25" ordinal="10" offset="115" sl="31" path="0" offsetend="117" fileid="1" />
+                <BranchPoint vc="3" uspid="26" ordinal="11" offset="115" sl="31" path="1" offsetend="123" fileid="1" />
+                <BranchPoint vc="1" uspid="27" ordinal="12" offset="136" sl="34" path="0" offsetend="138" fileid="1" />
+                <BranchPoint vc="2" uspid="28" ordinal="13" offset="136" sl="34" path="1" offsetend="144" fileid="1" />
+                <BranchPoint vc="1" uspid="29" ordinal="14" offset="162" sl="37" path="0" offsetend="164" fileid="1" />
+                <BranchPoint vc="1" uspid="30" ordinal="15" offset="162" sl="37" path="1" offsetend="170" fileid="1" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="7" uspid="1" ordinal="0" offset="0" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663312</MetadataToken>
+              <Name>System.Void BibliotecaRosangela.Domain.Features.Books.Book::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="31" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+    <Module hash="33-58-BC-F0-5C-4D-56-3D-20-6F-07-BB-54-FC-8E-99-9D-9F-8E-58">
+      <Summary numSequencePoints="7" visitedSequencePoints="7" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+      <ModulePath>C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\BibliotecaRosangela\BibliotecaRosangela.Domain.Test\bin\Debug\BibliotecaRosangela.Infra.dll</ModulePath>
+      <ModuleTime>2018-05-22T02:07:15.7578158Z</ModuleTime>
+      <ModuleName>BibliotecaRosangela.Infra</ModuleName>
+      <Files>
+        <File uid="21" fullPath="C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\BibliotecaRosangela\BibliotecaRosangela.Infra\DateHelper.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="7" visitedSequencePoints="7" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>BibliotecaRosangela.Infra.DateHelper</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" crapScore="2" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="7" visitedSequencePoints="7" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663297</MetadataToken>
+              <Name>System.Boolean BibliotecaRosangela.Infra.DateHelper::CompareDateSmallerCurrent(System.DateTime)</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="32" ordinal="0" offset="0" sl="12" sc="9" el="12" ec="10" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="2" uspid="33" ordinal="1" offset="1" sl="13" sc="13" el="13" ec="61" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="2" uspid="34" ordinal="2" offset="13" sl="14" sc="13" el="14" ec="29" bec="2" bev="2" fileid="21" />
+                <SequencePoint vc="1" uspid="35" ordinal="3" offset="24" sl="15" sc="13" el="15" ec="14" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="36" ordinal="4" offset="25" sl="16" sc="17" el="16" ec="29" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="37" ordinal="5" offset="29" sl="19" sc="13" el="19" ec="26" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="2" uspid="38" ordinal="6" offset="33" sl="20" sc="9" el="20" ec="10" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="39" ordinal="0" offset="22" sl="14" path="0" offsetend="24" fileid="21" />
+                <BranchPoint vc="1" uspid="40" ordinal="1" offset="22" sl="14" path="1" offsetend="29" fileid="21" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="32" ordinal="0" offset="0" sl="12" sc="9" el="12" ec="10" bec="0" bev="0" fileid="21" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+  </Modules>
+</CoverageSession>
