@@ -40,10 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Books\BookService.cs" />
+    <Compile Include="Features\Books\IBookService.cs" />
+    <Compile Include="Features\Loans\ILoanService.cs" />
+    <Compile Include="Features\Loans\LoanService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Features\" />
+    <ProjectReference Include="..\BibliotecaRosangela.Domain\BibliotecaRosangela.Domain.csproj">
+      <Project>{8D40898A-BC01-4057-8949-52764D63EE61}</Project>
+      <Name>BibliotecaRosangela.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

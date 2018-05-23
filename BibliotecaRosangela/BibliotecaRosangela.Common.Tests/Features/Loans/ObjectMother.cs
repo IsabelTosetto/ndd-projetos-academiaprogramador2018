@@ -17,5 +17,14 @@ namespace BibliotecaRosangela.Common.Tests.Features.Loans
                 ReturnDate = DateTime.Now.AddDays(15)
             };
         }
+
+        public static Loan GetLoanInvalidClienteName()
+        {
+            return new Loan()
+            {
+                ClientName = "",
+                ReturnDate = DateTime.Now.AddDays(15)
+            };
+        }
     }
 }

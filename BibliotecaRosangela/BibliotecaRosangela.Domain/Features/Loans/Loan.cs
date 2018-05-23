@@ -25,6 +25,9 @@ namespace BibliotecaRosangela.Domain.Features.Loans
 
             if (ReturnDate.CompareDateSmallerCurrent())
                 throw new LoanDateLowerThanCurrentException();
+
+            if (Book.Disponibility == false)
+                throw new LoanBookUnavailableException();
         }
     }
 }

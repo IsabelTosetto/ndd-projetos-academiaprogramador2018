@@ -25,6 +25,7 @@ namespace BibliotecaRosangela.Domain.Test.Features.Loans
             loan.Id = 1;
             loan.ClientName = "Isabel";
             loan.Book = _mockBook.Object;
+            _mockBook.Object.Disponibility = true;
             loan.ReturnDate = DateTime.Now.AddDays(15);
 
             loan.Validate();
@@ -64,22 +65,23 @@ namespace BibliotecaRosangela.Domain.Test.Features.Loans
             executeAction.Should().Throw<LoanClientNameLessThan3CharactersException>();
         }
 
-        //[Test]
-        //public void Loan_Valid_Book_Unavailable_ShouldBeFail()
-        //{
-        //    //Cenário
-        //    Loan loan = new Loan();
-        //    loan.Id = 1;
-        //    loan.ClientName = "Isabel";
-        //    loan.Book = _mockBook.Object;
-        //    loan.ReturnDate = DateTime.Now.AddDays(15);
+        [Test]
+        public void Loan_Valid_Book_Unavailable_ShouldBeFail()
+        {
+            //Cenário
+            Loan loan = new Loan();
+            loan.Id = 1;
+            loan.ClientName = "Isabel";
+            loan.Book = _mockBook.Object;
+            _mockBook.Object.Disponibility = false;
+            loan.ReturnDate = DateTime.Now.AddDays(15);
 
-        //    //Executa
-        //    Action executeAction = loan.Validate;
+            //Executa
+            Action executeAction = loan.Validate;
 
-        //    //Saída
-        //    executeAction.Should().Throw<LoanBookUnavailableException>();
-        //}
+            //Saída
+            executeAction.Should().Throw<LoanBookUnavailableException>();
+        }
 
 
         [Test]
