@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.Common;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BibliotecaRosangela.Infra
 {
+    [ExcludeFromCodeCoverage]
     public static class Db
     {
         private static readonly string dataProvider = ConfigurationManager.AppSettings.Get("DataProvider");
@@ -89,7 +91,7 @@ namespace BibliotecaRosangela.Infra
         /// <param name="sql"></param>
         /// <param name="parms"></param>
         /// <returns></returns>
-        public static long Insert(string sql, object[] parms = null)
+        public static int Insert(string sql, object[] parms = null)
         {
             using (var connection = factory.CreateConnection())
             {

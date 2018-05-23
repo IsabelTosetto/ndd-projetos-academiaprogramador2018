@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaRosangela.Common.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaRosangela.Application.Tests", "BibliotecaRosangela.Application.Tests\BibliotecaRosangela.Application.Tests.csproj", "{A0BAA911-B729-4281-9D13-0E698DB6BD4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaRosangela.Infra.Data.Tests", "BibliotecaRosangela.Infra.Data.Tests\BibliotecaRosangela.Infra.Data.Tests.csproj", "{FDD1F8D2-7D09-401B-807F-E2EEE5D83680}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{A0BAA911-B729-4281-9D13-0E698DB6BD4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0BAA911-B729-4281-9D13-0E698DB6BD4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0BAA911-B729-4281-9D13-0E698DB6BD4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD1F8D2-7D09-401B-807F-E2EEE5D83680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD1F8D2-7D09-401B-807F-E2EEE5D83680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD1F8D2-7D09-401B-807F-E2EEE5D83680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD1F8D2-7D09-401B-807F-E2EEE5D83680}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +81,7 @@ Global
 		{AA20B8FD-5413-4C11-AC12-26C909568FF8} = {828F2379-6789-4F11-B756-ED4A9FF248CF}
 		{879F82A2-148A-4618-BDD5-59500736AA43} = {828F2379-6789-4F11-B756-ED4A9FF248CF}
 		{A0BAA911-B729-4281-9D13-0E698DB6BD4A} = {828F2379-6789-4F11-B756-ED4A9FF248CF}
+		{FDD1F8D2-7D09-401B-807F-E2EEE5D83680} = {828F2379-6789-4F11-B756-ED4A9FF248CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31108E52-E0AF-44F1-AFE5-3171B10FFF74}

@@ -34,5 +34,31 @@ namespace BibliotecaRosangela.Common.Tests.Features.Books
                 Disponibility = true
             };
         }
+
+        public static Book GetBookInvalidTheme()
+        {
+            return new Book()
+            {
+                Title = "Novo livro",
+                Theme = "Tem",
+                Author = "Autor",
+                Volume = 1,
+                PublicationDate = DateTime.Now.AddYears(-3),
+                Disponibility = true
+            };
+        }
+
+        public static Book GetBookInvalidVolume()
+        {
+            return new Book()
+            {
+                Title = "Novo livro",
+                Theme = "Tema",
+                Author = "Autor",
+                Volume = -1,
+                PublicationDate = DateTime.Now.AddYears(-3),
+                Disponibility = true
+            };
+        }
     }
 }
