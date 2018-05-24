@@ -54,7 +54,7 @@
     <Compile Include="Features\Loans\ILoanRepository.cs" />
     <Compile Include="Features\Loans\Loan.cs" />
     <Compile Include="Features\Loans\LoanBookUnavailableException.cs" />
-    <Compile Include="Features\Loans\LoanClienteNameNullOrEmptyException.cs" />
+    <Compile Include="Features\Loans\LoanClientNameNullOrEmptyException.cs" />
     <Compile Include="Features\Loans\LoanClientNameLessThan3CharactersException.cs" />
     <Compile Include="Features\Loans\LoanDateLowerThanCurrentException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -18,7 +18,7 @@ namespace BibliotecaRosangela.Domain.Features.Loans
         public void Validate()
         {
             if (string.IsNullOrEmpty(ClientName))
-                throw new LoanClienteNameNullOrEmptyException();
+                throw new LoanClientNameNullOrEmptyException();
 
             if (ClientName.Length < 3)
                 throw new LoanClientNameLessThan3CharactersException();

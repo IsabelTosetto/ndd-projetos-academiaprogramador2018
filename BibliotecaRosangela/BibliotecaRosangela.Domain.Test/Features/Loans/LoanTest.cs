@@ -45,7 +45,7 @@ namespace BibliotecaRosangela.Domain.Test.Features.Loans
             Action executeAction = loan.Validate;
 
             //Saída
-            executeAction.Should().Throw<LoanClienteNameNullOrEmptyException>();
+            executeAction.Should().Throw<LoanClientNameNullOrEmptyException>();
         }
 
         [Test]

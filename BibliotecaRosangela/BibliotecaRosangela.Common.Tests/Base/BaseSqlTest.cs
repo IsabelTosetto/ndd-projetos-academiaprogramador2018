@@ -15,7 +15,7 @@ namespace BibliotecaRosangela.Common.Tests.Base
 
         private const string INSERT_BOOK = "INSERT INTO TBBook(Title,Theme,Author,Volume,PublicationDate,Disponibility) " +
             "VALUES ('Livro Teste', 'Tema Teste', 'Autor Teste', 1, GETDATE(), 1)";
-        private const string INSERT_LOAN = "INSERT INTO TBLoan (ClientName,BookId,ReturnDate) VALUES ('Nome Teste', 1, GETDATE())";
+        private const string INSERT_LOAN = "INSERT INTO TBLoan (ClientName,BookId,ReturnDate) VALUES ('Nome Teste', 1, '2018-05-30')";
 
         public static void SeedDatabase()
         {

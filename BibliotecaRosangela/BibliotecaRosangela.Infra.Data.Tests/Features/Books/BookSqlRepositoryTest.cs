@@ -142,7 +142,6 @@ namespace BibliotecaRosangela.Infra.Data.Tests.Features.Books
         public void BookSqlRepository_GetAll_ShouldBeOk()
         {
             //Cenário
-            int biggerThan = 0;
             int sizeListExpected = 1;
             int idFirstBookListExpected = 1;
 

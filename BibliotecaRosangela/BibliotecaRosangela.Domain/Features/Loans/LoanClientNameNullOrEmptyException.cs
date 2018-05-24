@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BibliotecaRosangela.Domain.Features.Loans
 {
-    public class LoanClienteNameNullOrEmptyException : BusinessException
+    public class LoanClientNameNullOrEmptyException : BusinessException
     {
-        public LoanClienteNameNullOrEmptyException() : base("O Nome do Cliente não pode ser nulo ou vazio!")
+        public LoanClientNameNullOrEmptyException() : base("O Nome do Cliente não pode ser nulo ou vazio!")
         {
 
         }

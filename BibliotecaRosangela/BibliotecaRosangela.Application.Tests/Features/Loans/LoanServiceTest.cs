@@ -66,7 +66,7 @@ namespace BibliotecaRosangela.Application.Tests.Features.Loans
             Action comparison = () => service.Add(modelo);
 
             //Saída
-            comparison.Should().Throw<LoanClienteNameNullOrEmptyException>();
+            comparison.Should().Throw<LoanClientNameNullOrEmptyException>();
             _mockRepository.VerifyNoOtherCalls();
         }
 
@@ -111,7 +111,7 @@ namespace BibliotecaRosangela.Application.Tests.Features.Loans
             Action comparison = () => service.Update(modelo);
 
             //Saída
-            comparison.Should().Throw<LoanClienteNameNullOrEmptyException>();
+            comparison.Should().Throw<LoanClientNameNullOrEmptyException>();
             _mockRepository.VerifyNoOtherCalls();
         }
 

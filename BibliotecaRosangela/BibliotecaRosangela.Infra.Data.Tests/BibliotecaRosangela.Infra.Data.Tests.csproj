@@ -62,15 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Books\BookSqlRepositoryTest.cs" />
+    <Compile Include="Features\Loans\LoanSqlRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Loans\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BibliotecaRosangela.Common.Tests\BibliotecaRosangela.Common.Tests.csproj">
       <Project>{879F82A2-148A-4618-BDD5-59500736AA43}</Project>
