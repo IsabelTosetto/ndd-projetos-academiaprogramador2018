@@ -14,6 +14,7 @@ namespace BibliotecaRosangela.Domain.Features.Loans
         public string ClientName { get; set; }
         public Book Book { get; set; }
         public DateTime ReturnDate { get; set; }
+        public double penalty;
 
         public void Validate()
         {
@@ -28,6 +29,20 @@ namespace BibliotecaRosangela.Domain.Features.Loans
 
             if (Book.Disponibility == false)
                 throw new LoanBookUnavailableException();
+        }
+
+        public void Devolution(DateTime devolutionDate) //CalcularMulta
+        {
+            TimeSpan total = ReturnDate.Subtract(devolutionDate);
+            int totalDays;
+            if(total.Days < 1)
+            {
+                totalDays = total.Days * -1;
+                penalty = totalDays * 2.50;
+            } else
+            {
+                penalty = 0;
+            }
         }
     }
 }

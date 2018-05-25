@@ -101,10 +101,49 @@ namespace BibliotecaRosangela.Domain.Test.Features.Loans
             executeAction.Should().Throw<LoanDateLowerThanCurrentException>();
         }
 
-        [TearDown]
-        public void TearDown()
+       [Test]
+       public void Loan_Valid_Devolution_PenaltyEqualZero_ShouldBeOk()
         {
-            _mockBook = null;
+            //Cenário
+            Loan loan = new Loan();
+            loan.Id = 1;
+            loan.ClientName = "Isabel";
+            loan.Book = _mockBook.Object;
+            _mockBook.Object.Disponibility = true;
+            loan.ReturnDate = DateTime.Now.AddDays(15);
+
+            DateTime devolutionDate = DateTime.Now.AddDays(12);
+
+            double penaltyExpected = 0;
+
+            //Executa
+            loan.Devolution(devolutionDate);
+
+            //Saída
+            loan.penalty.Should().Be(penaltyExpected);
         }
+
+        [Test]
+        public void Loan_Valid_Devolution_WithPenalty_ShouldBeOk()
+        {
+            //Cenário
+            Loan loan = new Loan();
+            loan.Id = 1;
+            loan.ClientName = "Isabel";
+            loan.Book = _mockBook.Object;
+            _mockBook.Object.Disponibility = true;
+            loan.ReturnDate = DateTime.Now.AddDays(15);
+
+            DateTime devolutionDate = DateTime.Now.AddDays(17);
+
+            double penaltyExpected = 5;
+
+            //Executa
+            loan.Devolution(devolutionDate);
+
+            //Saída
+            loan.penalty.Should().Be(penaltyExpected);
+        }
+
     }
 }
