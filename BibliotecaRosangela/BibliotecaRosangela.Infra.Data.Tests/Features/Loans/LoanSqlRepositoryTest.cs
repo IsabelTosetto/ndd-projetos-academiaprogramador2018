@@ -59,6 +59,19 @@ namespace BibliotecaRosangela.Infra.Data.Tests.Features.Loans
         }
 
         [Test]
+        public void LoanSqlRepository_Save_Book_NullOrEmpty_ShouldBeFail()
+        {
+            //Cenário
+            Loan loan = ObjectMother.GetLoan();
+
+            //Executa
+            Action executeAction = () => _repository.Save(loan);
+
+            //Saída
+            executeAction.Should().Throw<LoanBookNullOrEmptyException>();
+        }
+
+        [Test]
         public void LoanSqlRepository_Save_Book_Unavailable_ShouldBeFail()
         {
             //Cenário
@@ -79,8 +92,6 @@ namespace BibliotecaRosangela.Infra.Data.Tests.Features.Loans
             //Cenário
             int idSearch = 1;
             Loan loan = _repository.Get(idSearch);
-            loan.Id = 1;
-            loan.Book.Disponibility = true;
             string oldClientName = loan.ClientName;
             loan.ClientName = "Novo nome";
 
@@ -137,6 +148,20 @@ namespace BibliotecaRosangela.Infra.Data.Tests.Features.Loans
             result.Should().NotBeNull();
             result.Id.Should().Be(idSearch);
             result.Id.Should().BeGreaterThan(biggerThan);
+        }
+
+        [Test]
+        public void LoanSqlRepository_Get_LoanWithBook_ShouldBeOk()
+        {
+            //Cenário
+            int idSearch = 1;
+
+            //Executa
+            Loan result = _repository.Get(idSearch);
+
+            //Saída
+            result.Should().NotBeNull();
+            result.Book.Should().NotBeNull();
         }
 
         [Test]

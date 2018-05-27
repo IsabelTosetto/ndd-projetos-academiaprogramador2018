@@ -83,6 +83,21 @@ namespace BibliotecaRosangela.Domain.Test.Features.Loans
             executeAction.Should().Throw<LoanBookUnavailableException>();
         }
 
+        [Test]
+        public void Loan_Valid_Book_NullOrEmpty_ShouldBeFail()
+        {
+            //Cenário
+            Loan loan = new Loan();
+            loan.Id = 1;
+            loan.ClientName = "Isabel";
+            loan.ReturnDate = DateTime.Now.AddDays(15);
+
+            //Executa
+            Action executeAction = loan.Validate;
+
+            //Saída
+            executeAction.Should().Throw<LoanBookNullOrEmptyException>();
+        }
 
         [Test]
         public void Loan_Valid_ReturnDate_LowerThanCurrent_ShouldBeFail()

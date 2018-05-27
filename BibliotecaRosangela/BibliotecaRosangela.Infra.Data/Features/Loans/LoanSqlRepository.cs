@@ -43,14 +43,35 @@ namespace BibliotecaRosangela.Infra.Data.Features.Loans
             if (id < 1)
                 throw new IdentifierUndefinedException();
 
-            string sql = "SELECT * FROM TBLoan WHERE Id = @Id";
+            string sql = @"SELECT
+                L.Id,
+                L.ClientName,
+                L.ReturnDate,
+                B.Id AS BookId,
+			    B.Title,
+                B.Disponibility
+            FROM
+                TBLoan AS L
+				INNER JOIN
+				TBBook AS B ON B.Id = L.BookId
+            WHERE L.Id = @Id";
 
             return Db.Get(sql, Make, new object[] { "Id", id });
         }
 
         public IEnumerable<Loan> GetAll()
         {
-            string sql = "SELECT * FROM TBLoan";
+            string sql = @"SELECT
+                L.Id,
+                L.ClientName,
+                L.ReturnDate,
+                B.Id AS BookId,
+			    B.Title,
+                B.Disponibility
+            FROM
+                TBLoan AS L
+				INNER JOIN
+				TBBook AS B ON B.Id = L.BookId";
 
             return Db.GetAll(sql, Make);
         }
@@ -75,7 +96,9 @@ namespace BibliotecaRosangela.Infra.Data.Features.Loans
                ClientName = reader["ClientName"].ToString(),
                Book = new Book
                {
-                   Id = Convert.ToInt32(reader["BookId"])
+                   Id = Convert.ToInt32(reader["BookId"]),
+                   Title = reader["Title"].ToString(),
+                   Disponibility = Convert.ToBoolean(reader["Disponibility"])
                },
                ReturnDate = Convert.ToDateTime(reader["ReturnDate"])
            };

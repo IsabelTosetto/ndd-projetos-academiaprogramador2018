@@ -53,6 +53,7 @@
     <Compile Include="Features\Books\IBookRepository.cs" />
     <Compile Include="Features\Loans\ILoanRepository.cs" />
     <Compile Include="Features\Loans\Loan.cs" />
+    <Compile Include="Features\Loans\LoanBookNullOrEmptyException.cs" />
     <Compile Include="Features\Loans\LoanBookUnavailableException.cs" />
     <Compile Include="Features\Loans\LoanClientNameNullOrEmptyException.cs" />
     <Compile Include="Features\Loans\LoanClientNameLessThan3CharactersException.cs" />

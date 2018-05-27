@@ -27,8 +27,12 @@ namespace BibliotecaRosangela.Domain.Features.Loans
             if (ReturnDate.CompareDateSmallerCurrent())
                 throw new LoanDateLowerThanCurrentException();
 
+            if (Book == null)
+                throw new LoanBookNullOrEmptyException();
+
             if (Book.Disponibility == false)
                 throw new LoanBookUnavailableException();
+
         }
 
         public void Devolution(DateTime devolutionDate) //CalcularMulta
