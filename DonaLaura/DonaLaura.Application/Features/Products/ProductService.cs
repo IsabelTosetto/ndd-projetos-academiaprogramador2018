@@ -53,5 +53,10 @@ namespace DonaLaura.Application.Features.Products
 
             _repository.Delete(product);
         }
+
+        public bool RegistryWithDependency(Product product)
+        {
+            return _repository.RegistryWithDependency(product);
+        }
     }
 }

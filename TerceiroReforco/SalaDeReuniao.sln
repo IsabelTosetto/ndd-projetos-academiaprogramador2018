@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerceiroReforco.Domain", "TerceiroReforco.Domain\TerceiroReforco.Domain.csproj", "{6A5F8E8B-4BD7-46C2-B37F-983C7BF5AFD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation Layer", "1 - Presentation Layer", "{02B07D3F-F516-4A84-86DB-735AA2801119}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Distributed Services Layer", "2 - Distributed Services Layer", "{AE28FFD5-3BE6-4E3D-A0BB-A1E09D818151}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Application Layer", "3 - Application Layer", "{996D8EF3-07AF-420D-8C70-C8D1AE1E07EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{3112897C-510C-4E38-8831-942C04812DC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infrastructure Layer", "5 - Infrastructure Layer", "{65014385-348F-4CBD-B23A-9B2E116F86C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{347367E3-BA04-4FE7-94A3-6FC9B0A50257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerceiroReforco.Application", "TerceiroReforco.Application\TerceiroReforco.Application.csproj", "{5B2B031D-72CF-405F-8313-E4D7435A5CA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerceiroReforco.Infra", "TerceiroReforco.Infra\TerceiroReforco.Infra.csproj", "{CECEFF46-7B5C-4FA2-B0BA-2824085372F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerceiroReforco.Infra.Data", "TerceiroReforco.Infra.Data\TerceiroReforco.Infra.Data.csproj", "{43F6CAEA-1262-45D0-A559-924AB037492A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A5F8E8B-4BD7-46C2-B37F-983C7BF5AFD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5F8E8B-4BD7-46C2-B37F-983C7BF5AFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5F8E8B-4BD7-46C2-B37F-983C7BF5AFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5F8E8B-4BD7-46C2-B37F-983C7BF5AFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B2B031D-72CF-405F-8313-E4D7435A5CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B2B031D-72CF-405F-8313-E4D7435A5CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B2B031D-72CF-405F-8313-E4D7435A5CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B2B031D-72CF-405F-8313-E4D7435A5CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CECEFF46-7B5C-4FA2-B0BA-2824085372F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CECEFF46-7B5C-4FA2-B0BA-2824085372F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CECEFF46-7B5C-4FA2-B0BA-2824085372F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CECEFF46-7B5C-4FA2-B0BA-2824085372F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F6CAEA-1262-45D0-A559-924AB037492A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F6CAEA-1262-45D0-A559-924AB037492A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F6CAEA-1262-45D0-A559-924AB037492A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F6CAEA-1262-45D0-A559-924AB037492A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A5F8E8B-4BD7-46C2-B37F-983C7BF5AFD1} = {3112897C-510C-4E38-8831-942C04812DC9}
+		{5B2B031D-72CF-405F-8313-E4D7435A5CA2} = {996D8EF3-07AF-420D-8C70-C8D1AE1E07EC}
+		{CECEFF46-7B5C-4FA2-B0BA-2824085372F0} = {65014385-348F-4CBD-B23A-9B2E116F86C4}
+		{43F6CAEA-1262-45D0-A559-924AB037492A} = {65014385-348F-4CBD-B23A-9B2E116F86C4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08A08F26-06A4-4BA5-886D-3306985720A5}
+	EndGlobalSection
+EndGlobal

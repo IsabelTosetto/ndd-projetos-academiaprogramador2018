@@ -13,5 +13,6 @@ namespace DonaLaura.Domain.Features.Products
         Product Get(long id);
         IEnumerable<Product> GetAll();
         void Delete(Product product);
+        bool RegistryWithDependency(Product product);
     }
 }

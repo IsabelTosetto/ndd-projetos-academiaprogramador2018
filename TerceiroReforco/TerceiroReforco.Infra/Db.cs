@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DonaLaura.Infra
+namespace TerceiroReforco.Infra
 {
     public static class Db
     {
@@ -89,7 +89,7 @@ namespace DonaLaura.Infra
         /// <param name="sql"></param>
         /// <param name="parms"></param>
         /// <returns></returns>
-        public static int Insert(string sql, object[] parms = null)
+        public static long Insert(string sql, object[] parms = null)
         {
             using (var connection = factory.CreateConnection())
             {
@@ -138,33 +138,6 @@ namespace DonaLaura.Infra
         public static void Delete(string sql, object[] parms = null)
         {
             Update(sql, parms);
-        }
-
-
-        public static int Exist(string sql, object[] parms = null)
-        {
-            using (var connection = factory.CreateConnection())
-            {
-                using (var command = factory.CreateCommand())
-                {
-                    connection.ConnectionString = connectionString;
-
-                    command.Parameters.Clear();
-                    command.Connection = connection;
-                    command.CommandText = sql;
-
-                    connection.Open();
-
-                    command.SetParameters(parms);
-
-                    var reader = command.ExecuteReader();
-                    if (reader.Read())
-                        return Convert.ToInt32(reader["Exist"]);
-
-                }
-            }
-
-            return -1;
         }
 
 

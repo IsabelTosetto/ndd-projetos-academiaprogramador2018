@@ -20,5 +20,5 @@ CREATE TABLE [dbo].[TBSale]
 	[ClientName] VARCHAR(40) NOT NULL,
 	[Quantity] INT NOT NULL,
 	[Lucre] NUMERIC(7,2) NOT NULL,
-	CONSTRAINT [FK_TBSale_TBProduct] FOREIGN KEY ([ProductId]) REFERENCES [dbo].[TBProduct] ([Id])
+	CONSTRAINT [FK_TBSale_TBProduct] FOREIGN KEY ([ProductId]) REFERENCES [dbo].[TBProduct] ([Id]) ON DELETE CASCADE
 )

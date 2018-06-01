@@ -42,7 +42,7 @@ namespace DonaLaura.Infra.Data.Features.Products
                 throw new IdentifierUndefinedException();
 
             string sql = "SELECT * FROM TBProduct WHERE Id = @Id";
-            
+
             return Db.Get(sql, Make, new object[] { "@Id", id });
         }
 
@@ -52,7 +52,7 @@ namespace DonaLaura.Infra.Data.Features.Products
 
             return Db.GetAll(sql, Make);
         }
-        
+
         public void Delete(Product product)
         {
             string sql = "DELETE FROM TBProduct WHERE Id = @Id";
@@ -61,6 +61,20 @@ namespace DonaLaura.Infra.Data.Features.Products
                 throw new IdentifierUndefinedException();
 
             Db.Delete(sql, new object[] { "@Id", product.Id });
+        }
+
+        public bool RegistryWithDependency(Product product)
+        {
+            string sql = @"SELECT CAST(
+                            CASE WHEN EXISTS(
+                            SELECT S.ProductId FROM TBSale AS S 
+                            WHERE S.ProductId = @Id) 
+                            THEN 1 
+                            ELSE 0 
+                            END 
+                            AS BIT) AS Exist";
+
+            return Db.Exist(sql, new object[] { "@Id", product.Id }) == 1;
         }
 
         /// <summary>
@@ -102,15 +116,15 @@ namespace DonaLaura.Infra.Data.Features.Products
             }
             else
             {
-              parametros = new object[]
-              {
+                parametros = new object[]
+                {
                   "@Name", product.Name,
                   "@SalePrice", product.SalePrice,
                   "CostPrice", product.CostPrice,
                   "Disponibility", product.Disponibility,
                   "FabricationDate", product.FabricationDate,
                   "ExpirationDate", product.ExpirationDate
-              };
+                };
             }
 
             return parametros;
