@@ -1,0 +1,19 @@
+﻿CREATE DATABASE DBSalaDeReuniao;
+
+USE DBSalaDeReuniao;
+
+CREATE TABLE [dbo].[TBEmployee]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Name] VARCHAR(50) NOT NULL,
+	[Position] VARCHAR(50) NOT NULL,
+	[Branch] VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE [dbo].[TBRoom]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+	[Name] VARCHAR(50) NOT NULL,
+	[NumberOfSeats] VARCHAR(50) NOT NULL,
+	[Disponibility] BIT NOT NULL
+)

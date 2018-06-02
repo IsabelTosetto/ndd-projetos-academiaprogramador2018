@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="4.6.0.0">
+  <Summary numSequencePoints="89" visitedSequencePoints="89" numBranchPoints="43" visitedBranchPoints="43" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" maxCrapScore="4" minCrapScore="1" visitedClasses="5" numClasses="5" visitedMethods="21" numMethods="21" />
+  <Modules>
+    <Module hash="3F-C4-23-8C-0C-AB-01-A8-00-5A-22-2F-A8-E0-C2-E2-9A-00-F5-24">
+      <Summary numSequencePoints="14" visitedSequencePoints="14" numBranchPoints="12" visitedBranchPoints="12" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="4" minCyclomaticComplexity="0" maxCrapScore="4" minCrapScore="0" visitedClasses="2" numClasses="2" visitedMethods="2" numMethods="2" />
+      <ModulePath>C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\SalaDeReuniao\SalaDeReuniao.Application.Tests\bin\Debug\TerceiroReforco.Domain.dll</ModulePath>
+      <ModuleTime>2018-06-02T18:21:41.372738Z</ModuleTime>
+      <ModuleName>TerceiroReforco.Domain</ModuleName>
+      <Files>
+        <File uid="1" fullPath="C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\SalaDeReuniao\TerceiroReforco.Domain\Features\Rooms\Room.cs" />
+        <File uid="4" fullPath="C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\SalaDeReuniao\TerceiroReforco.Domain\Features\Employees\Employee.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="5" visitedBranchPoints="5" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="3" minCyclomaticComplexity="1" maxCrapScore="3" minCrapScore="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>TerceiroReforco.Domain.Features.Rooms.Room</FullName>
+          <Methods>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663302</MetadataToken>
+              <Name>System.Int32 TerceiroReforco.Domain.Features.Rooms.Room::get_Id()</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663303</MetadataToken>
+              <Name>System.Void TerceiroReforco.Domain.Features.Rooms.Room::set_Id(System.Int32)</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663304</MetadataToken>
+              <Name>System.String TerceiroReforco.Domain.Features.Rooms.Room::get_Name()</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663305</MetadataToken>
+              <Name>System.Void TerceiroReforco.Domain.Features.Rooms.Room::set_Name(System.String)</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663306</MetadataToken>
+              <Name>System.Int32 TerceiroReforco.Domain.Features.Rooms.Room::get_NumberOfSeats()</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663307</MetadataToken>
+              <Name>System.Void TerceiroReforco.Domain.Features.Rooms.Room::set_NumberOfSeats(System.Int32)</Name>
+              <FileRef uid="1" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="3" nPathComplexity="4" sequenceCoverage="100" branchCoverage="100" crapScore="3" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="5" visitedBranchPoints="5" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="3" minCyclomaticComplexity="3" maxCrapScore="3" minCrapScore="3" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663308</MetadataToken>
+              <Name>System.Void TerceiroReforco.Domain.Features.Rooms.Room::Validate()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="7" uspid="1" ordinal="0" offset="0" sl="16" sc="9" el="16" ec="10" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="7" uspid="2" ordinal="1" offset="1" sl="17" sc="13" el="17" ec="44" bec="2" bev="2" fileid="1" />
+                <SequencePoint vc="2" uspid="3" ordinal="2" offset="16" sl="18" sc="17" el="18" ec="58" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="5" uspid="4" ordinal="3" offset="22" sl="20" sc="13" el="20" ec="35" bec="2" bev="2" fileid="1" />
+                <SequencePoint vc="2" uspid="5" ordinal="4" offset="35" sl="21" sc="17" el="21" ec="63" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="3" uspid="6" ordinal="5" offset="41" sl="22" sc="9" el="22" ec="10" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="2" uspid="7" ordinal="0" offset="14" sl="17" path="0" offsetend="16" fileid="1" />
+                <BranchPoint vc="5" uspid="8" ordinal="1" offset="14" sl="17" path="1" offsetend="22" fileid="1" />
+                <BranchPoint vc="2" uspid="9" ordinal="2" offset="33" sl="20" path="0" offsetend="35" fileid="1" />
+                <BranchPoint vc="3" uspid="10" ordinal="3" offset="33" sl="20" path="1" offsetend="41" fileid="1" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="7" uspid="1" ordinal="0" offset="0" sl="16" sc="9" el="16" ec="10" bec="0" bev="0" fileid="1" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663309</MetadataToken>
+              <Name>System.Void TerceiroReforco.Domain.Features.Rooms.Room::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="11" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="8" visitedSequencePoints="8" numBranchPoints="7" visitedBranchPoints="7" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="4" minCyclomaticComplexity="1" maxCrapScore="4" minCrapScore="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
+          <FullName>TerceiroReforco.Domain.Features.Employees.Employee</FullName>
+          <Methods>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663312</MetadataToken>
+              <Name>System.Int32 TerceiroReforco.Domain.Features.Employees.Employee::get_Id()</Name>
+              <FileRef uid="4" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663313</MetadataToken>
+              <Name>System.Void TerceiroReforco.Domain.Features.Employees.Employee::set_Id(System.Int32)</Name>
+              <FileRef uid="4" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663314</MetadataToken>
+              <Name>System.String TerceiroReforco.Domain.Features.Employees.Employee::get_Name()</Name>
+              <FileRef uid="4" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663315</MetadataToken>
+              <Name>System.Void TerceiroReforco.Domain.Features.Employees.Employee::set_Name(System.String)</Name>
+              <FileRef uid="4" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663316</MetadataToken>
+              <Name>System.String TerceiroReforco.Domain.Features.Employees.Employee::get_Position()</Name>
+              <FileRef uid="4" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663317</MetadataToken>
+              <Name>System.Void TerceiroReforco.Domain.Features.Employees.Employee::set_Position(System.String)</Name>
+              <FileRef uid="4" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="true" isSetter="false">
+              <MetadataToken>100663318</MetadataToken>
+              <Name>System.String TerceiroReforco.Domain.Features.Employees.Employee::get_Branch()</Name>
+              <FileRef uid="4" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method skippedDueTo="AutoImplementedProperty" visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="true">
+              <MetadataToken>100663319</MetadataToken>
+              <Name>System.Void TerceiroReforco.Domain.Features.Employees.Employee::set_Branch(System.String)</Name>
+              <FileRef uid="4" />
+              <SequencePoints />
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="4" nPathComplexity="8" sequenceCoverage="100" branchCoverage="100" crapScore="4" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="8" visitedSequencePoints="8" numBranchPoints="7" visitedBranchPoints="7" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="4" minCyclomaticComplexity="4" maxCrapScore="4" minCrapScore="4" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663320</MetadataToken>
+              <Name>System.Void TerceiroReforco.Domain.Features.Employees.Employee::Validate()</Name>
+              <FileRef uid="4" />
+              <SequencePoints>
+                <SequencePoint vc="8" uspid="12" ordinal="0" offset="0" sl="17" sc="9" el="17" ec="10" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="8" uspid="13" ordinal="1" offset="1" sl="18" sc="13" el="18" ec="44" bec="2" bev="2" fileid="4" />
+                <SequencePoint vc="2" uspid="14" ordinal="2" offset="16" sl="19" sc="17" el="19" ec="62" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="6" uspid="15" ordinal="3" offset="22" sl="21" sc="13" el="21" ec="48" bec="2" bev="2" fileid="4" />
+                <SequencePoint vc="1" uspid="16" ordinal="4" offset="37" sl="22" sc="17" el="22" ec="66" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="5" uspid="17" ordinal="5" offset="43" sl="24" sc="13" el="24" ec="46" bec="2" bev="2" fileid="4" />
+                <SequencePoint vc="2" uspid="18" ordinal="6" offset="58" sl="25" sc="17" el="25" ec="64" bec="0" bev="0" fileid="4" />
+                <SequencePoint vc="3" uspid="19" ordinal="7" offset="64" sl="26" sc="9" el="26" ec="10" bec="0" bev="0" fileid="4" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="2" uspid="20" ordinal="0" offset="14" sl="18" path="0" offsetend="16" fileid="4" />
+                <BranchPoint vc="6" uspid="21" ordinal="1" offset="14" sl="18" path="1" offsetend="22" fileid="4" />
+                <BranchPoint vc="1" uspid="22" ordinal="2" offset="35" sl="21" path="0" offsetend="37" fileid="4" />
+                <BranchPoint vc="5" uspid="23" ordinal="3" offset="35" sl="21" path="1" offsetend="43" fileid="4" />
+                <BranchPoint vc="2" uspid="24" ordinal="4" offset="56" sl="24" path="0" offsetend="58" fileid="4" />
+                <BranchPoint vc="3" uspid="25" ordinal="5" offset="56" sl="24" path="1" offsetend="64" fileid="4" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="8" uspid="12" ordinal="0" offset="0" sl="17" sc="9" el="17" ec="10" bec="0" bev="0" fileid="4" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="0" branchCoverage="0" crapScore="2" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="0" numMethods="0" />
+              <MetadataToken>100663321</MetadataToken>
+              <Name>System.Void TerceiroReforco.Domain.Features.Employees.Employee::.ctor()</Name>
+              <SequencePoints />
+              <BranchPoints />
+              <MethodPoint vc="0" uspid="26" ordinal="0" offset="0" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+    <Module hash="2B-41-45-B5-DB-69-F5-3B-88-25-C3-18-FB-85-5F-24-46-C2-20-19">
+      <Summary numSequencePoints="54" visitedSequencePoints="54" numBranchPoints="24" visitedBranchPoints="24" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="1" visitedClasses="2" numClasses="2" visitedMethods="12" numMethods="12" />
+      <ModulePath>C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\SalaDeReuniao\SalaDeReuniao.Application.Tests\bin\Debug\TerceiroReforco.Application.dll</ModulePath>
+      <ModuleTime>2018-06-02T18:33:38.2531414Z</ModuleTime>
+      <ModuleName>TerceiroReforco.Application</ModuleName>
+      <Files>
+        <File uid="21" fullPath="C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\SalaDeReuniao\TerceiroReforco.Application\Features\Rooms\RoomService.cs" />
+        <File uid="22" fullPath="C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\SalaDeReuniao\TerceiroReforco.Application\Features\Employees\EmployeeService.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="27" visitedSequencePoints="27" numBranchPoints="12" visitedBranchPoints="12" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="6" numMethods="6" />
+          <FullName>TerceiroReforco.Application.Features.Rooms.RoomService</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663302</MetadataToken>
+              <Name>System.Void TerceiroReforco.Application.Features.Rooms.RoomService::.ctor(TerceiroReforco.Domain.Features.Rooms.IRoomRepository)</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="10" uspid="27" ordinal="0" offset="0" sl="15" sc="9" el="15" ec="55" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="10" uspid="28" ordinal="1" offset="7" sl="16" sc="9" el="16" ec="10" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="10" uspid="29" ordinal="2" offset="8" sl="17" sc="13" el="17" ec="38" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="10" uspid="30" ordinal="3" offset="15" sl="18" sc="9" el="18" ec="10" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="10" uspid="27" ordinal="0" offset="0" sl="15" sc="9" el="15" ec="55" bec="0" bev="0" fileid="21" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663303</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Rooms.Room TerceiroReforco.Application.Features.Rooms.RoomService::Add(TerceiroReforco.Domain.Features.Rooms.Room)</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="31" ordinal="0" offset="0" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="2" uspid="32" ordinal="1" offset="1" sl="22" sc="13" el="22" ec="29" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="33" ordinal="2" offset="8" sl="24" sc="13" el="24" ec="43" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="34" ordinal="3" offset="23" sl="25" sc="9" el="25" ec="10" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="31" ordinal="0" offset="0" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="21" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663304</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Rooms.Room TerceiroReforco.Application.Features.Rooms.RoomService::Update(TerceiroReforco.Domain.Features.Rooms.Room)</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="35" ordinal="0" offset="0" sl="28" sc="9" el="28" ec="10" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="3" uspid="36" ordinal="1" offset="1" sl="29" sc="13" el="29" ec="29" bec="2" bev="2" fileid="21" />
+                <SequencePoint vc="1" uspid="37" ordinal="2" offset="14" sl="30" sc="17" el="30" ec="58" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="2" uspid="38" ordinal="3" offset="20" sl="32" sc="13" el="32" ec="29" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="39" ordinal="4" offset="27" sl="34" sc="13" el="34" ec="45" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="40" ordinal="5" offset="42" sl="35" sc="9" el="35" ec="10" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="41" ordinal="0" offset="12" sl="29" path="0" offsetend="14" fileid="21" />
+                <BranchPoint vc="2" uspid="42" ordinal="1" offset="12" sl="29" path="1" offsetend="20" fileid="21" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="3" uspid="35" ordinal="0" offset="0" sl="28" sc="9" el="28" ec="10" bec="0" bev="0" fileid="21" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663305</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Rooms.Room TerceiroReforco.Application.Features.Rooms.RoomService::Get(System.Int64)</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="43" ordinal="0" offset="0" sl="38" sc="9" el="38" ec="10" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="2" uspid="44" ordinal="1" offset="1" sl="39" sc="13" el="39" ec="24" bec="2" bev="2" fileid="21" />
+                <SequencePoint vc="1" uspid="45" ordinal="2" offset="10" sl="40" sc="17" el="40" ec="58" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="46" ordinal="3" offset="16" sl="42" sc="13" el="42" ec="40" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="47" ordinal="4" offset="31" sl="43" sc="9" el="43" ec="10" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="48" ordinal="0" offset="8" sl="39" path="0" offsetend="10" fileid="21" />
+                <BranchPoint vc="1" uspid="49" ordinal="1" offset="8" sl="39" path="1" offsetend="16" fileid="21" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="43" ordinal="0" offset="0" sl="38" sc="9" el="38" ec="10" bec="0" bev="0" fileid="21" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663306</MetadataToken>
+              <Name>System.Collections.Generic.IEnumerable`1&lt;TerceiroReforco.Domain.Features.Rooms.Room&gt; TerceiroReforco.Application.Features.Rooms.RoomService::GetAll()</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="50" ordinal="0" offset="0" sl="46" sc="9" el="46" ec="10" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="51" ordinal="1" offset="1" sl="47" sc="13" el="47" ec="41" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="52" ordinal="2" offset="15" sl="48" sc="9" el="48" ec="10" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="50" ordinal="0" offset="0" sl="46" sc="9" el="46" ec="10" bec="0" bev="0" fileid="21" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663307</MetadataToken>
+              <Name>System.Void TerceiroReforco.Application.Features.Rooms.RoomService::Delete(TerceiroReforco.Domain.Features.Rooms.Room)</Name>
+              <FileRef uid="21" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="53" ordinal="0" offset="0" sl="51" sc="9" el="51" ec="10" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="2" uspid="54" ordinal="1" offset="1" sl="52" sc="13" el="52" ec="29" bec="2" bev="2" fileid="21" />
+                <SequencePoint vc="1" uspid="55" ordinal="2" offset="14" sl="53" sc="17" el="53" ec="58" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="56" ordinal="3" offset="20" sl="55" sc="13" el="55" ec="38" bec="0" bev="0" fileid="21" />
+                <SequencePoint vc="1" uspid="57" ordinal="4" offset="33" sl="56" sc="9" el="56" ec="10" bec="0" bev="0" fileid="21" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="58" ordinal="0" offset="12" sl="52" path="0" offsetend="14" fileid="21" />
+                <BranchPoint vc="1" uspid="59" ordinal="1" offset="12" sl="52" path="1" offsetend="20" fileid="21" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="53" ordinal="0" offset="0" sl="51" sc="9" el="51" ec="10" bec="0" bev="0" fileid="21" />
+            </Method>
+          </Methods>
+        </Class>
+        <Class>
+          <Summary numSequencePoints="27" visitedSequencePoints="27" numBranchPoints="12" visitedBranchPoints="12" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="6" numMethods="6" />
+          <FullName>TerceiroReforco.Application.Features.Employees.EmployeeService</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663308</MetadataToken>
+              <Name>System.Void TerceiroReforco.Application.Features.Employees.EmployeeService::.ctor(TerceiroReforco.Domain.Features.Employees.IEmployeeRepository)</Name>
+              <FileRef uid="22" />
+              <SequencePoints>
+                <SequencePoint vc="10" uspid="60" ordinal="0" offset="0" sl="15" sc="9" el="15" ec="63" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="10" uspid="61" ordinal="1" offset="7" sl="16" sc="9" el="16" ec="10" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="10" uspid="62" ordinal="2" offset="8" sl="17" sc="13" el="17" ec="38" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="10" uspid="63" ordinal="3" offset="15" sl="18" sc="9" el="18" ec="10" bec="0" bev="0" fileid="22" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="10" uspid="60" ordinal="0" offset="0" sl="15" sc="9" el="15" ec="63" bec="0" bev="0" fileid="22" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663309</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Employees.Employee TerceiroReforco.Application.Features.Employees.EmployeeService::Add(TerceiroReforco.Domain.Features.Employees.Employee)</Name>
+              <FileRef uid="22" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="64" ordinal="0" offset="0" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="2" uspid="65" ordinal="1" offset="1" sl="22" sc="13" el="22" ec="33" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="1" uspid="66" ordinal="2" offset="8" sl="24" sc="13" el="24" ec="47" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="1" uspid="67" ordinal="3" offset="23" sl="25" sc="9" el="25" ec="10" bec="0" bev="0" fileid="22" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="64" ordinal="0" offset="0" sl="21" sc="9" el="21" ec="10" bec="0" bev="0" fileid="22" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="6" visitedSequencePoints="6" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663310</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Employees.Employee TerceiroReforco.Application.Features.Employees.EmployeeService::Update(TerceiroReforco.Domain.Features.Employees.Employee)</Name>
+              <FileRef uid="22" />
+              <SequencePoints>
+                <SequencePoint vc="3" uspid="68" ordinal="0" offset="0" sl="28" sc="9" el="28" ec="10" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="3" uspid="69" ordinal="1" offset="1" sl="29" sc="13" el="29" ec="33" bec="2" bev="2" fileid="22" />
+                <SequencePoint vc="1" uspid="70" ordinal="2" offset="14" sl="30" sc="17" el="30" ec="58" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="2" uspid="71" ordinal="3" offset="20" sl="32" sc="13" el="32" ec="33" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="1" uspid="72" ordinal="4" offset="27" sl="34" sc="13" el="34" ec="49" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="1" uspid="73" ordinal="5" offset="42" sl="35" sc="9" el="35" ec="10" bec="0" bev="0" fileid="22" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="74" ordinal="0" offset="12" sl="29" path="0" offsetend="14" fileid="22" />
+                <BranchPoint vc="2" uspid="75" ordinal="1" offset="12" sl="29" path="1" offsetend="20" fileid="22" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="3" uspid="68" ordinal="0" offset="0" sl="28" sc="9" el="28" ec="10" bec="0" bev="0" fileid="22" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663311</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Employees.Employee TerceiroReforco.Application.Features.Employees.EmployeeService::Get(System.Int64)</Name>
+              <FileRef uid="22" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="76" ordinal="0" offset="0" sl="38" sc="9" el="38" ec="10" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="2" uspid="77" ordinal="1" offset="1" sl="39" sc="13" el="39" ec="24" bec="2" bev="2" fileid="22" />
+                <SequencePoint vc="1" uspid="78" ordinal="2" offset="10" sl="40" sc="17" el="40" ec="58" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="1" uspid="79" ordinal="3" offset="16" sl="42" sc="13" el="42" ec="40" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="1" uspid="80" ordinal="4" offset="31" sl="43" sc="9" el="43" ec="10" bec="0" bev="0" fileid="22" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="81" ordinal="0" offset="8" sl="39" path="0" offsetend="10" fileid="22" />
+                <BranchPoint vc="1" uspid="82" ordinal="1" offset="8" sl="39" path="1" offsetend="16" fileid="22" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="76" ordinal="0" offset="0" sl="38" sc="9" el="38" ec="10" bec="0" bev="0" fileid="22" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663312</MetadataToken>
+              <Name>System.Collections.Generic.IEnumerable`1&lt;TerceiroReforco.Domain.Features.Employees.Employee&gt; TerceiroReforco.Application.Features.Employees.EmployeeService::GetAll()</Name>
+              <FileRef uid="22" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="83" ordinal="0" offset="0" sl="46" sc="9" el="46" ec="10" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="1" uspid="84" ordinal="1" offset="1" sl="47" sc="13" el="47" ec="41" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="1" uspid="85" ordinal="2" offset="15" sl="48" sc="9" el="48" ec="10" bec="0" bev="0" fileid="22" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="83" ordinal="0" offset="0" sl="46" sc="9" el="46" ec="10" bec="0" bev="0" fileid="22" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="2" nPathComplexity="2" sequenceCoverage="100" branchCoverage="100" crapScore="2" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="3" visitedBranchPoints="3" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" maxCrapScore="2" minCrapScore="2" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663313</MetadataToken>
+              <Name>System.Void TerceiroReforco.Application.Features.Employees.EmployeeService::Delete(TerceiroReforco.Domain.Features.Employees.Employee)</Name>
+              <FileRef uid="22" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="86" ordinal="0" offset="0" sl="51" sc="9" el="51" ec="10" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="2" uspid="87" ordinal="1" offset="1" sl="52" sc="13" el="52" ec="33" bec="2" bev="2" fileid="22" />
+                <SequencePoint vc="1" uspid="88" ordinal="2" offset="14" sl="53" sc="17" el="53" ec="58" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="1" uspid="89" ordinal="3" offset="20" sl="55" sc="13" el="55" ec="42" bec="0" bev="0" fileid="22" />
+                <SequencePoint vc="1" uspid="90" ordinal="4" offset="33" sl="56" sc="9" el="56" ec="10" bec="0" bev="0" fileid="22" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="1" uspid="91" ordinal="0" offset="12" sl="52" path="0" offsetend="14" fileid="22" />
+                <BranchPoint vc="1" uspid="92" ordinal="1" offset="12" sl="52" path="1" offsetend="20" fileid="22" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="86" ordinal="0" offset="0" sl="51" sc="9" el="51" ec="10" bec="0" bev="0" fileid="22" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+    <Module hash="04-EF-E9-8B-C3-07-51-29-2E-32-6B-56-AB-DB-85-43-9C-FD-1E-53">
+      <Summary numSequencePoints="21" visitedSequencePoints="21" numBranchPoints="7" visitedBranchPoints="7" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="7" numMethods="7" />
+      <ModulePath>C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\SalaDeReuniao\SalaDeReuniao.Application.Tests\bin\Debug\SalaDeReuniao.Common.Tests.dll</ModulePath>
+      <ModuleTime>2018-06-02T18:21:41.7603335Z</ModuleTime>
+      <ModuleName>SalaDeReuniao.Common.Tests</ModuleName>
+      <Files>
+        <File uid="25" fullPath="C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\SalaDeReuniao\SalaDeReuniao.Common.Tests\Features\Employees\ObjectMother.cs" />
+        <File uid="26" fullPath="C:\Users\Isabel\Documents\Projetos\ndd-projetos-academiaprogramador2018\SalaDeReuniao\SalaDeReuniao.Common.Tests\Features\Rooms\ObjectMother.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="21" visitedSequencePoints="21" numBranchPoints="7" visitedBranchPoints="7" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="1" numClasses="1" visitedMethods="7" numMethods="7" />
+          <FullName>SalaDeReuniao.Common.Tests.Base.ObjectMother</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663297</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Employees.Employee SalaDeReuniao.Common.Tests.Base.ObjectMother::GetEmployee()</Name>
+              <FileRef uid="25" />
+              <SequencePoints>
+                <SequencePoint vc="7" uspid="93" ordinal="0" offset="0" sl="13" sc="9" el="13" ec="10" bec="0" bev="0" fileid="25" />
+                <SequencePoint vc="7" uspid="94" ordinal="1" offset="1" sl="14" sc="13" el="19" ec="15" bec="0" bev="0" fileid="25" />
+                <SequencePoint vc="7" uspid="95" ordinal="2" offset="45" sl="20" sc="9" el="20" ec="10" bec="0" bev="0" fileid="25" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="7" uspid="93" ordinal="0" offset="0" sl="13" sc="9" el="13" ec="10" bec="0" bev="0" fileid="25" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663298</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Employees.Employee SalaDeReuniao.Common.Tests.Base.ObjectMother::GetEmployeeWithEmptyName()</Name>
+              <FileRef uid="25" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="96" ordinal="0" offset="0" sl="23" sc="9" el="23" ec="10" bec="0" bev="0" fileid="25" />
+                <SequencePoint vc="2" uspid="97" ordinal="1" offset="1" sl="24" sc="13" el="29" ec="15" bec="0" bev="0" fileid="25" />
+                <SequencePoint vc="2" uspid="98" ordinal="2" offset="45" sl="30" sc="9" el="30" ec="10" bec="0" bev="0" fileid="25" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="96" ordinal="0" offset="0" sl="23" sc="9" el="23" ec="10" bec="0" bev="0" fileid="25" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663299</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Employees.Employee SalaDeReuniao.Common.Tests.Base.ObjectMother::GetEmployeeWithEmptyPosition()</Name>
+              <FileRef uid="25" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="99" ordinal="0" offset="0" sl="33" sc="9" el="33" ec="10" bec="0" bev="0" fileid="25" />
+                <SequencePoint vc="1" uspid="100" ordinal="1" offset="1" sl="34" sc="13" el="39" ec="15" bec="0" bev="0" fileid="25" />
+                <SequencePoint vc="1" uspid="101" ordinal="2" offset="45" sl="40" sc="9" el="40" ec="10" bec="0" bev="0" fileid="25" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="1" uspid="99" ordinal="0" offset="0" sl="33" sc="9" el="33" ec="10" bec="0" bev="0" fileid="25" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663300</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Employees.Employee SalaDeReuniao.Common.Tests.Base.ObjectMother::GetEmployeeWithEmptyBranch()</Name>
+              <FileRef uid="25" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="102" ordinal="0" offset="0" sl="43" sc="9" el="43" ec="10" bec="0" bev="0" fileid="25" />
+                <SequencePoint vc="2" uspid="103" ordinal="1" offset="1" sl="44" sc="13" el="49" ec="15" bec="0" bev="0" fileid="25" />
+                <SequencePoint vc="2" uspid="104" ordinal="2" offset="45" sl="50" sc="9" el="50" ec="10" bec="0" bev="0" fileid="25" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="102" ordinal="0" offset="0" sl="43" sc="9" el="43" ec="10" bec="0" bev="0" fileid="25" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663301</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Rooms.Room SalaDeReuniao.Common.Tests.Base.ObjectMother::GetRoom()</Name>
+              <FileRef uid="26" />
+              <SequencePoints>
+                <SequencePoint vc="7" uspid="105" ordinal="0" offset="0" sl="13" sc="9" el="13" ec="10" bec="0" bev="0" fileid="26" />
+                <SequencePoint vc="7" uspid="106" ordinal="1" offset="1" sl="14" sc="13" el="18" ec="15" bec="0" bev="0" fileid="26" />
+                <SequencePoint vc="7" uspid="107" ordinal="2" offset="30" sl="19" sc="9" el="19" ec="10" bec="0" bev="0" fileid="26" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="7" uspid="105" ordinal="0" offset="0" sl="13" sc="9" el="13" ec="10" bec="0" bev="0" fileid="26" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663302</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Rooms.Room SalaDeReuniao.Common.Tests.Base.ObjectMother::GetRoomWithEmptyName()</Name>
+              <FileRef uid="26" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="108" ordinal="0" offset="0" sl="22" sc="9" el="22" ec="10" bec="0" bev="0" fileid="26" />
+                <SequencePoint vc="2" uspid="109" ordinal="1" offset="1" sl="23" sc="13" el="27" ec="15" bec="0" bev="0" fileid="26" />
+                <SequencePoint vc="2" uspid="110" ordinal="2" offset="30" sl="28" sc="9" el="28" ec="10" bec="0" bev="0" fileid="26" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="108" ordinal="0" offset="0" sl="22" sc="9" el="22" ec="10" bec="0" bev="0" fileid="26" />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="1" nPathComplexity="0" sequenceCoverage="100" branchCoverage="100" crapScore="1" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="1" minCrapScore="1" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663303</MetadataToken>
+              <Name>TerceiroReforco.Domain.Features.Rooms.Room SalaDeReuniao.Common.Tests.Base.ObjectMother::GetRoomWithInvalidNumberOfSeats()</Name>
+              <FileRef uid="26" />
+              <SequencePoints>
+                <SequencePoint vc="2" uspid="111" ordinal="0" offset="0" sl="31" sc="9" el="31" ec="10" bec="0" bev="0" fileid="26" />
+                <SequencePoint vc="2" uspid="112" ordinal="1" offset="1" sl="32" sc="13" el="36" ec="15" bec="0" bev="0" fileid="26" />
+                <SequencePoint vc="2" uspid="113" ordinal="2" offset="29" sl="37" sc="9" el="37" ec="10" bec="0" bev="0" fileid="26" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="2" uspid="111" ordinal="0" offset="0" sl="31" sc="9" el="31" ec="10" bec="0" bev="0" fileid="26" />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+  </Modules>
+</CoverageSession>
