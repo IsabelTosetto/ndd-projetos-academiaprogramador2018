@@ -7,7 +7,7 @@ using TerceiroReforco.Domain.Features.Employees;
 
 namespace SalaDeReuniao.Common.Tests.Base
 {
-    public static class ObjectMother
+    public static partial class ObjectMother
     {
         public static Employee GetEmployee()
         {

@@ -48,6 +48,10 @@
     <Compile Include="Features\Employees\EmployeeEmptyOrNullNameException.cs" />
     <Compile Include="Features\Employees\EmployeeEmptyOrNullPositionException.cs" />
     <Compile Include="Features\Employees\IEmployeeRepository.cs" />
+    <Compile Include="Features\Rooms\IRoomRepository.cs" />
+    <Compile Include="Features\Rooms\Room.cs" />
+    <Compile Include="Features\Rooms\RoomEmptyOrNullNameException.cs" />
+    <Compile Include="Features\Rooms\RoomInvalidNumberOfSeatsException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

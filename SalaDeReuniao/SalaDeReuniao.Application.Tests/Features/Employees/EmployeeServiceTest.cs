@@ -42,7 +42,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Employees
             // Verifica
             result.Should().NotBeNull();
             result.Id.Should().BeGreaterThan(0);
-            _mockRepository.Verify(pr => pr.Save(employee));
+            _mockRepository.Verify(m => m.Save(employee));
         }
 
         [Test]
@@ -76,7 +76,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Employees
             // Verifica
             result.Should().NotBeNull();
             result.Id.Should().BeGreaterThan(0);
-            _mockRepository.Verify(pr => pr.Update(employee));
+            _mockRepository.Verify(m => m.Update(employee));
         }
 
         [Test]
@@ -115,7 +115,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Employees
             int id = 1;
 
             _mockRepository
-                .Setup(x => x.Get(id))
+                .Setup(m => m.Get(id))
                 .Returns(ObjectMother.GetEmployee());
 
             // Ação
@@ -123,7 +123,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Employees
 
             // Verifica
             employee.Should().NotBeNull();
-            _mockRepository.Verify(x => x.Get(id));
+            _mockRepository.Verify(m => m.Get(id));
         }
 
         [Test]
@@ -142,7 +142,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Employees
         {
             // Cenário
             _mockRepository
-                .Setup(x => x.GetAll())
+                .Setup(m => m.GetAll())
                 .Returns(new List<Employee>()
                         {
                             new Employee { Id = 1 },
@@ -155,7 +155,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Employees
 
             // Verifica
             employees.Count().Should().Equals(3);
-            _mockRepository.Verify(x => x.GetAll());
+            _mockRepository.Verify(m => m.GetAll());
         }
 
         [Test]
@@ -166,13 +166,13 @@ namespace SalaDeReuniao.Application.Tests.Features.Employees
             employee.Id = 1;
 
             _mockRepository
-                .Setup(x => x.Delete(employee));
+                .Setup(m => m.Delete(employee));
 
             // Ação
             _service.Delete(employee);
 
             // Verifica
-            _mockRepository.Verify(x => x.Delete(employee));
+            _mockRepository.Verify(m => m.Delete(employee));
         }
 
         [Test]
@@ -182,7 +182,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Employees
             Employee employee = ObjectMother.GetEmployee();
 
             _mockRepository
-                .Setup(x => x.Delete(employee));
+                .Setup(m => m.Delete(employee));
 
             // Ação
             Action executeAction = () => _service.Delete(employee);

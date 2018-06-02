@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Features\Employees\EmployeeService.cs" />
     <Compile Include="Features\Employees\IEmployeeService.cs" />
+    <Compile Include="Features\Rooms\IRoomService.cs" />
+    <Compile Include="Features\Rooms\RoomService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
