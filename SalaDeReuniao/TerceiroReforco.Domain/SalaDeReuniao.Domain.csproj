@@ -47,6 +47,7 @@
     <Compile Include="Features\Employees\EmployeeEmptyOrNullBranchException.cs" />
     <Compile Include="Features\Employees\EmployeeEmptyOrNullNameException.cs" />
     <Compile Include="Features\Employees\EmployeeEmptyOrNullPositionException.cs" />
+    <Compile Include="Features\Employees\IEmployeeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
