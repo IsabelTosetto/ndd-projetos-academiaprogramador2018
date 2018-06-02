@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TerceiroReforco.Domain.Exceptions
 {
-    class UnsupportedOperationException : Exception
+    public class UnsupportedOperationException : Exception
     {
         public UnsupportedOperationException() : base("Operação não suportada")
         {

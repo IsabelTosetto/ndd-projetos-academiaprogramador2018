@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TerceiroReforco.Domain.Exceptions
 {
-    class BusinessException : Exception
+    public class BusinessException : Exception
     {
         public BusinessException(string message) : base(message)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TerceiroReforco.Domain.Exceptions
 {
-    class IdentifierUndefinedException : BusinessException
+    public class IdentifierUndefinedException : BusinessException
     {
         public IdentifierUndefinedException() : base("O id não pode ser vazio")
         {
