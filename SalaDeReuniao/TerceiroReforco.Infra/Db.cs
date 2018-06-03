@@ -89,7 +89,7 @@ namespace TerceiroReforco.Infra
         /// <param name="sql"></param>
         /// <param name="parms"></param>
         /// <returns></returns>
-        public static long Insert(string sql, object[] parms = null)
+        public static int Insert(string sql, object[] parms = null)
         {
             using (var connection = factory.CreateConnection())
             {

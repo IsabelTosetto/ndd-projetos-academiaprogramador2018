@@ -27,7 +27,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Rooms
         }
 
         [Test]
-        public void RoomService_Save_ShouldBeOk()
+        public void RoomService_Add_ShouldBeOk()
         {
             // Cenário
             Room room = ObjectMother.GetRoom();

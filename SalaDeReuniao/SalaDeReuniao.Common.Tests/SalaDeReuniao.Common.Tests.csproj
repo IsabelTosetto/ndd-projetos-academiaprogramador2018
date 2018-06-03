@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseSqlTest.cs" />
     <Compile Include="Features\Employees\ObjectMother.cs" />
     <Compile Include="Features\Rooms\ObjectMother.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -49,6 +50,13 @@
       <Project>{6A5F8E8B-4BD7-46C2-B37F-983C7BF5AFD1}</Project>
       <Name>SalaDeReuniao.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TerceiroReforco.Infra\SalaDeReuniao.Infra.csproj">
+      <Project>{CECEFF46-7B5C-4FA2-B0BA-2824085372F0}</Project>
+      <Name>SalaDeReuniao.Infra</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DbScript.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

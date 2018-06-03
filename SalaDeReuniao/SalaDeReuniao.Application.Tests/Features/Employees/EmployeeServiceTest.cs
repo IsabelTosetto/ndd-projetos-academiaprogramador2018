@@ -27,7 +27,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Employees
         }
 
         [Test]
-        public void EmployeeService_Save_ShouldBeOk()
+        public void EmployeeService_Add_ShouldBeOk()
         {
             // Cenário
             Employee employee = ObjectMother.GetEmployee();

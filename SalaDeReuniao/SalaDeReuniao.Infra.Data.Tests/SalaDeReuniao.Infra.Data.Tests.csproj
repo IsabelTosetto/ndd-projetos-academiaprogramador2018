@@ -62,10 +62,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Employees\EmployeeSqlRepositoryTest.cs" />
+    <Compile Include="Features\Rooms\RoomSqlRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SalaDeReuniao.Common.Tests\SalaDeReuniao.Common.Tests.csproj">
+      <Project>{DE4EC729-ACD0-45A9-BD3A-08E76BAE2D05}</Project>
+      <Name>SalaDeReuniao.Common.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerceiroReforco.Domain\SalaDeReuniao.Domain.csproj">
+      <Project>{6A5F8E8B-4BD7-46C2-B37F-983C7BF5AFD1}</Project>
+      <Name>SalaDeReuniao.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerceiroReforco.Infra.Data\SalaDeReuniao.Infra.Data.csproj">
+      <Project>{43F6CAEA-1262-45D0-A559-924AB037492A}</Project>
+      <Name>SalaDeReuniao.Infra.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
