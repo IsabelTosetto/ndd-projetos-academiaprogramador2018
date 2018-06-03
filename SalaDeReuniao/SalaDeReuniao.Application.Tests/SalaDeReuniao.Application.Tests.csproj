@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Features\Employees\EmployeeServiceTest.cs" />
     <Compile Include="Features\Rooms\RoomServiceTest.cs" />
+    <Compile Include="Features\Schedulings\SchedulingServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

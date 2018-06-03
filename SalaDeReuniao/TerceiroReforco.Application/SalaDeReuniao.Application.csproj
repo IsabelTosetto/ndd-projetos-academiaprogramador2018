@@ -44,6 +44,8 @@
     <Compile Include="Features\Employees\IEmployeeService.cs" />
     <Compile Include="Features\Rooms\IRoomService.cs" />
     <Compile Include="Features\Rooms\RoomService.cs" />
+    <Compile Include="Features\Schedulings\ISchedulingService.cs" />
+    <Compile Include="Features\Schedulings\SchedulingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
