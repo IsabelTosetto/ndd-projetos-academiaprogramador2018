@@ -52,6 +52,11 @@
     <Compile Include="Features\Rooms\Room.cs" />
     <Compile Include="Features\Rooms\RoomEmptyOrNullNameException.cs" />
     <Compile Include="Features\Rooms\RoomInvalidNumberOfSeatsException.cs" />
+    <Compile Include="Features\Schedulings\Scheduling.cs" />
+    <Compile Include="Features\Schedulings\SchedulingEndTimeLessThanStartTimeException.cs" />
+    <Compile Include="Features\Schedulings\SchedulingNullEmployeeException.cs" />
+    <Compile Include="Features\Schedulings\SchedulingNullRoomException.cs" />
+    <Compile Include="Features\Schedulings\SchedulingStartTimeOverFlowException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

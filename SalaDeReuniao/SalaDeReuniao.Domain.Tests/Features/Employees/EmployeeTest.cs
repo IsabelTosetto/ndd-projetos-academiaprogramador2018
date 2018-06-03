@@ -14,7 +14,7 @@ namespace SalaDeReuniao.Domain.Tests.Features.Employees
     public class EmployeeTest
     {
         [Test]
-        public void Test_Employee_Valid_ShouldBeOk()
+        public void Employee_Valid_ShouldBeOk()
         {
             //Cenário
             Employee employee = ObjectMother.GetEmployee();
@@ -28,7 +28,7 @@ namespace SalaDeReuniao.Domain.Tests.Features.Employees
         }
 
         [Test]
-        public void Test_Employee_InvalidEmptyOrNullName_ShouldBeFail()
+        public void Employee_InvalidEmptyOrNullName_ShouldBeFail()
         {
             //Cenário
             Employee employee = ObjectMother.GetEmployeeWithEmptyName();
@@ -42,7 +42,7 @@ namespace SalaDeReuniao.Domain.Tests.Features.Employees
         }
 
         [Test]
-        public void Test_Employee_InvalidEmptyOrNullPosition_ShouldBeFail()
+        public void Employee_InvalidEmptyOrNullPosition_ShouldBeFail()
         {
             //Cenário
             Employee employee = ObjectMother.GetEmployeeWithEmptyPosition();
@@ -56,7 +56,7 @@ namespace SalaDeReuniao.Domain.Tests.Features.Employees
         }
 
         [Test]
-        public void Test_Employee_InvalidEmptyOrNullBranch_ShouldBeFail()
+        public void Employee_InvalidEmptyOrNullBranch_ShouldBeFail()
         {
             //Cenário
             Employee employee = ObjectMother.GetEmployeeWithEmptyBranch();

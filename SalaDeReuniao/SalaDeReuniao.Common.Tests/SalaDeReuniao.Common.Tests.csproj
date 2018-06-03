@@ -43,6 +43,7 @@
     <Compile Include="Base\BaseSqlTest.cs" />
     <Compile Include="Features\Employees\ObjectMother.cs" />
     <Compile Include="Features\Rooms\ObjectMother.cs" />
+    <Compile Include="Features\Schedulings\ObjectMother.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

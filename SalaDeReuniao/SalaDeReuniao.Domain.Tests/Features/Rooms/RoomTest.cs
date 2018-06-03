@@ -14,7 +14,7 @@ namespace SalaDeReuniao.Domain.Tests.Features.Rooms
     public class RoomTest
     {
         [Test]
-        public void Test_Room_Valid_ShouldBeOk()
+        public void Room_Valid_ShouldBeOk()
         {
             //Cenário
             Room room = ObjectMother.GetRoom();
@@ -28,7 +28,7 @@ namespace SalaDeReuniao.Domain.Tests.Features.Rooms
         }
 
         [Test]
-        public void Test_Room_InvalidEmptyOrNullName_ShouldBeFail()
+        public void Room_InvalidEmptyOrNullName_ShouldBeFail()
         {
             //Cenário
             Room room = ObjectMother.GetRoomWithEmptyName();
@@ -42,7 +42,7 @@ namespace SalaDeReuniao.Domain.Tests.Features.Rooms
         }
 
         [Test]
-        public void Test_Room_InvalidNumberOfSeats_ShouldBeFail()
+        public void Room_InvalidNumberOfSeats_ShouldBeFail()
         {
             //Cenário
             Room room = ObjectMother.GetRoomWithInvalidNumberOfSeats();
