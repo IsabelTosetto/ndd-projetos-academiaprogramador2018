@@ -22,6 +22,7 @@ namespace SalaDeReuniao.Integration.Test.Features.Employees
         [SetUp]
         public void Initialize()
         {
+            BaseSqlTest.SeedDatabase();
             _repository = new EmployeeSqlRepository();
             _service = new EmployeeService(_repository);
         }

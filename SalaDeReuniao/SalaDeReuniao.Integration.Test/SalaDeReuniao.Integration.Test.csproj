@@ -62,16 +62,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Employees\EmployeeIntegrationTest.cs" />
+    <Compile Include="Features\Rooms\RoomIntegrationTest.cs" />
+    <Compile Include="Features\Schedulings\SchedulingIntegrationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Rooms\" />
-    <Folder Include="Features\Schedulings\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\SalaDeReuniao.Common.Tests\SalaDeReuniao.Common.Tests.csproj">
       <Project>{DE4EC729-ACD0-45A9-BD3A-08E76BAE2D05}</Project>
