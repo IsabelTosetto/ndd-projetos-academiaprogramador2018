@@ -133,6 +133,7 @@ namespace SalaDeReuniao.Domain.Tests.Features.Schedulings
             Scheduling scheduling = ObjectMother.GetScheduling();
 
             //Ação
+
         }
     }
 }

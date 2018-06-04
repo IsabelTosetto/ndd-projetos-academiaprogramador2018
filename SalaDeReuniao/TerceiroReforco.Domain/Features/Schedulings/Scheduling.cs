@@ -34,40 +34,55 @@ namespace TerceiroReforco.Domain.Features.Schedulings
                 throw new SchedulingUnavailableRoomException();
         }
 
-        public bool CheckBusyTimeStartTime(List<Scheduling> schedulings)
+        public bool CheckBusyTime(List<Scheduling> schedulings)
         {
-            foreach(Scheduling s in schedulings)
-            {
-                if(s.StartTime.Day == StartTime.Day)
-                {
-                    if(s.StartTime.Hour == StartTime.Hour)
-                    {
-                        return true; //hora ocupada
-                    }
-                    if (CompareSmallerEndTime(s.StartTime)) { //Confere se a hora inicial é menor que a hora final de outros agendamentos
-                        return true; //hora ocupada
-                    }
-                }
-            }
-            return false; //hora livre
+            if (CheckBusyTimeStartTime(schedulings) && CheckBusyTimeEndTime(schedulings))
+                return true;
+
+            return false;
         }
 
-        public bool CheckBusyTimeEndTime(List<Scheduling> schedulings)
+        private bool CheckBusyTimeStartTime(List<Scheduling> schedulings)
         {
             foreach (Scheduling s in schedulings)
             {
-                if (s.EndTime.Day == EndTime.Day)
+                if (s.Room == Room)
                 {
-                    if (EndTime.Hour > s.StartTime.Hour)
+                    if (s.StartTime.Day == StartTime.Day)
                     {
-                        return true; //hora final ocupada
+                        if (s.StartTime.Hour == StartTime.Hour)
+                        {
+                            return true; //hora ocupada
+                        }
+                        if (CompareSmallerEndTime(s.StartTime))
+                        { //Confere se a hora inicial é menor que a hora final de outros agendamentos
+                            return true; //hora ocupada
+                        }
                     }
                 }
             }
             return false; //hora livre
         }
 
-        public bool CompareStartTimeSmallerCurrent(DateTime dt)
+        private bool CheckBusyTimeEndTime(List<Scheduling> schedulings)
+        {
+            foreach (Scheduling s in schedulings)
+            {
+                if (s.Room == Room)
+                {
+                    if (s.EndTime.Day == EndTime.Day)
+                    {
+                        if (EndTime.Hour > s.StartTime.Hour)
+                        {
+                            return true; //hora final ocupada
+                        }
+                    }
+                }
+            }
+            return false; //hora livre
+        }
+
+        private bool CompareStartTimeSmallerCurrent(DateTime dt)
         {
             int result = DateTime.Compare(dt, DateTime.Now);
             if (result <= 0)
@@ -77,7 +92,7 @@ namespace TerceiroReforco.Domain.Features.Schedulings
             return false;
         }
 
-        public bool CompareEndTimeBiggerStartTime()
+        private bool CompareEndTimeBiggerStartTime()
         {
             int result = DateTime.Compare(EndTime, StartTime);
             if (result <= 0)
@@ -87,13 +102,13 @@ namespace TerceiroReforco.Domain.Features.Schedulings
             return false;
         }
 
-        public bool CompareSmallerEndTime(DateTime dt)
+        private bool CompareSmallerEndTime(DateTime dt)
         {
-            if(dt.Hour < EndTime.Hour)
+            if (dt.Hour < EndTime.Hour)
             {
                 return true; //menor que a hora final
             }
-            return false; 
+            return false;
         }
     }
 }
