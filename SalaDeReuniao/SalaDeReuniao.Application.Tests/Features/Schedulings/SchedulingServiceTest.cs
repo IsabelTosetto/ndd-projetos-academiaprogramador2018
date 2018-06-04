@@ -41,6 +41,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Schedulings
             Scheduling scheduling = ObjectMother.GetScheduling();
             scheduling.Employee = _mockEmployee.Object;
             scheduling.Room = _mockRoom.Object;
+            _mockRoom.Object.Disponibility = true;
 
             _mockRepository
                 .Setup(m => m.Save(scheduling))
@@ -79,6 +80,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Schedulings
             scheduling.Id = 1;
             scheduling.Employee = _mockEmployee.Object;
             scheduling.Room = _mockRoom.Object;
+            _mockRoom.Object.Disponibility = true;
 
             _mockRepository
                 .Setup(m => m.Update(scheduling))

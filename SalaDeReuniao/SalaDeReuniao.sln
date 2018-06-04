@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaDeReuniao.Application.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaDeReuniao.Infra.Data.Tests", "SalaDeReuniao.Infra.Data.Tests\SalaDeReuniao.Infra.Data.Tests.csproj", "{4302D56D-8ED1-4B03-8D07-DF21CCB74162}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaDeReuniao.Integration.Test", "SalaDeReuniao.Integration.Test\SalaDeReuniao.Integration.Test.csproj", "{8A7D6C1F-0C99-442A-82A0-C58D62FFAECE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{4302D56D-8ED1-4B03-8D07-DF21CCB74162}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4302D56D-8ED1-4B03-8D07-DF21CCB74162}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4302D56D-8ED1-4B03-8D07-DF21CCB74162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A7D6C1F-0C99-442A-82A0-C58D62FFAECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7D6C1F-0C99-442A-82A0-C58D62FFAECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A7D6C1F-0C99-442A-82A0-C58D62FFAECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7D6C1F-0C99-442A-82A0-C58D62FFAECE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +88,7 @@ Global
 		{CD5C28EE-5100-4EE3-A5DA-713E0C133BBB} = {347367E3-BA04-4FE7-94A3-6FC9B0A50257}
 		{97630EE1-1257-4057-8D2A-16CD38966719} = {347367E3-BA04-4FE7-94A3-6FC9B0A50257}
 		{4302D56D-8ED1-4B03-8D07-DF21CCB74162} = {347367E3-BA04-4FE7-94A3-6FC9B0A50257}
+		{8A7D6C1F-0C99-442A-82A0-C58D62FFAECE} = {347367E3-BA04-4FE7-94A3-6FC9B0A50257}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {08A08F26-06A4-4BA5-886D-3306985720A5}

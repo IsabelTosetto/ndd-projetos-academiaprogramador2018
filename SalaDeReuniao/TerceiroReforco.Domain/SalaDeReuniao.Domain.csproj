@@ -58,6 +58,7 @@
     <Compile Include="Features\Schedulings\SchedulingNullEmployeeException.cs" />
     <Compile Include="Features\Schedulings\SchedulingNullRoomException.cs" />
     <Compile Include="Features\Schedulings\SchedulingStartTimeOverFlowException.cs" />
+    <Compile Include="Features\Schedulings\SchedulingUnavailableRoomException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -29,6 +29,9 @@ namespace TerceiroReforco.Domain.Features.Schedulings
 
             if (Room == null)
                 throw new SchedulingNullRoomException();
+
+            if (Room.Disponibility == false)
+                throw new SchedulingUnavailableRoomException();
         }
 
         public bool CheckBusyTimeStartTime(List<Scheduling> schedulings)

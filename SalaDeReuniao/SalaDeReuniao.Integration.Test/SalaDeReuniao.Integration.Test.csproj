@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4302D56D-8ED1-4B03-8D07-DF21CCB74162}</ProjectGuid>
+    <ProjectGuid>{8A7D6C1F-0C99-442A-82A0-C58D62FFAECE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SalaDeReuniao.Infra.Data.Tests</RootNamespace>
-    <AssemblyName>SalaDeReuniao.Infra.Data.Tests</AssemblyName>
+    <RootNamespace>SalaDeReuniao.Integration.Test</RootNamespace>
+    <AssemblyName>SalaDeReuniao.Integration.Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -40,9 +40,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
-      <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
-    </Reference>
     <Reference Include="FluentAssertions, Version=5.3.2.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentAssertions.5.3.2\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
@@ -52,18 +49,11 @@
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Moq, Version=4.8.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
-      <HintPath>..\packages\Moq.4.8.2\lib\net45\Moq.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
@@ -71,9 +61,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\Employees\EmployeeSqlRepositoryTest.cs" />
-    <Compile Include="Features\Rooms\RoomSqlRepositoryTest.cs" />
-    <Compile Include="Features\Schedulings\SchedulingSqlRepositoryTest.cs" />
+    <Compile Include="Features\Employees\EmployeeIntegrationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,9 +69,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Features\Rooms\" />
+    <Folder Include="Features\Schedulings\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\SalaDeReuniao.Common.Tests\SalaDeReuniao.Common.Tests.csproj">
       <Project>{DE4EC729-ACD0-45A9-BD3A-08E76BAE2D05}</Project>
       <Name>SalaDeReuniao.Common.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerceiroReforco.Application\SalaDeReuniao.Application.csproj">
+      <Project>{5B2B031D-72CF-405F-8313-E4D7435A5CA2}</Project>
+      <Name>SalaDeReuniao.Application</Name>
     </ProjectReference>
     <ProjectReference Include="..\TerceiroReforco.Domain\SalaDeReuniao.Domain.csproj">
       <Project>{6A5F8E8B-4BD7-46C2-B37F-983C7BF5AFD1}</Project>

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Features\Employees\EmployeeSqlRepository.cs" />
     <Compile Include="Features\Rooms\RoomSqlRepository.cs" />
+    <Compile Include="Features\Schedulings\SchedulingSqlRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
