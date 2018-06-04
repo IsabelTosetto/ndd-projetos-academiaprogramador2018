@@ -211,5 +211,26 @@ namespace SalaDeReuniao.Application.Tests.Features.Schedulings
             executeAction.Should().Throw<IdentifierUndefinedException>();
             _mockRepository.VerifyNoOtherCalls();
         }
+
+        [Test]
+        public void SchedulingService_CheckAvailableRoom_ShouldBeOk()
+        {
+            //Cenário 
+            Scheduling scheduling = ObjectMother.GetScheduling();
+            scheduling.Id = 1;
+            scheduling.Employee = _mockEmployee.Object;
+            scheduling.Room = _mockRoom.Object;
+            _mockRoom.Object.Disponibility = true;
+
+            _mockRepository
+               .Setup(m => m.CheckAvailableRoom(scheduling)).Returns(false); ;
+
+            //Ação
+            var result = _service.CheckAvailableRoom(scheduling);
+
+            //Verificar
+            result.Should().Be(false);
+            _mockRepository.Verify(m => m.CheckAvailableRoom(scheduling));
+        }
     }
 }

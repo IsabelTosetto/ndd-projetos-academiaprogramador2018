@@ -94,6 +94,56 @@ namespace TerceiroReforco.Infra.Data.Features.Schedulings
             return true;
         }
 
+        public bool CheckAvailableRoom(Scheduling scheduling)
+        {
+            IEnumerable<Scheduling> schedulings = GetAll();
+
+            if (CheckBusyTimeStartTime(schedulings, scheduling) && CheckBusyTimeEndTime(schedulings, scheduling))
+                return true;
+
+            return false;
+        }
+
+        private bool CheckBusyTimeStartTime(IEnumerable<Scheduling> schedulings, Scheduling scheduling)
+        {
+            foreach (Scheduling s in schedulings)
+            {
+                if (s.Room == scheduling.Room)
+                {
+                    if (s.StartTime.Day == scheduling.StartTime.Day)
+                    {
+                        if (s.StartTime.Hour == scheduling.StartTime.Hour)
+                        {
+                            return true; //hora ocupada
+                        }
+                        if (scheduling.CompareSmallerEndTime(s.StartTime))
+                        { //Confere se a hora inicial é menor que a hora final de outros agendamentos
+                            return true; //hora ocupada
+                        }
+                    }
+                }
+            }
+            return false; //hora livre
+        }
+
+        private bool CheckBusyTimeEndTime(IEnumerable<Scheduling> schedulings, Scheduling scheduling)
+        {
+            foreach (Scheduling s in schedulings)
+            {
+                if (s.Room == scheduling.Room)
+                {
+                    if (s.EndTime.Day == scheduling.EndTime.Day)
+                    {
+                        if (scheduling.EndTime.Hour > s.StartTime.Hour)
+                        {
+                            return true; //hora final ocupada
+                        }
+                    }
+                }
+            }
+            return false; //hora livre
+        }
+
         /// <summary>
         /// Cria um objeto Customer baseado no DataReader.
         /// </summary>

@@ -34,55 +34,7 @@ namespace TerceiroReforco.Domain.Features.Schedulings
                 throw new SchedulingUnavailableRoomException();
         }
 
-        public bool CheckBusyTime(List<Scheduling> schedulings)
-        {
-            if (CheckBusyTimeStartTime(schedulings) && CheckBusyTimeEndTime(schedulings))
-                return true;
-
-            return false;
-        }
-
-        private bool CheckBusyTimeStartTime(List<Scheduling> schedulings)
-        {
-            foreach (Scheduling s in schedulings)
-            {
-                if (s.Room == Room)
-                {
-                    if (s.StartTime.Day == StartTime.Day)
-                    {
-                        if (s.StartTime.Hour == StartTime.Hour)
-                        {
-                            return true; //hora ocupada
-                        }
-                        if (CompareSmallerEndTime(s.StartTime))
-                        { //Confere se a hora inicial é menor que a hora final de outros agendamentos
-                            return true; //hora ocupada
-                        }
-                    }
-                }
-            }
-            return false; //hora livre
-        }
-
-        private bool CheckBusyTimeEndTime(List<Scheduling> schedulings)
-        {
-            foreach (Scheduling s in schedulings)
-            {
-                if (s.Room == Room)
-                {
-                    if (s.EndTime.Day == EndTime.Day)
-                    {
-                        if (EndTime.Hour > s.StartTime.Hour)
-                        {
-                            return true; //hora final ocupada
-                        }
-                    }
-                }
-            }
-            return false; //hora livre
-        }
-
-        private bool CompareStartTimeSmallerCurrent(DateTime dt)
+        public bool CompareStartTimeSmallerCurrent(DateTime dt)
         {
             int result = DateTime.Compare(dt, DateTime.Now);
             if (result <= 0)
@@ -92,7 +44,7 @@ namespace TerceiroReforco.Domain.Features.Schedulings
             return false;
         }
 
-        private bool CompareEndTimeBiggerStartTime()
+        public bool CompareEndTimeBiggerStartTime()
         {
             int result = DateTime.Compare(EndTime, StartTime);
             if (result <= 0)
@@ -102,7 +54,7 @@ namespace TerceiroReforco.Domain.Features.Schedulings
             return false;
         }
 
-        private bool CompareSmallerEndTime(DateTime dt)
+        public bool CompareSmallerEndTime(DateTime dt)
         {
             if (dt.Hour < EndTime.Hour)
             {

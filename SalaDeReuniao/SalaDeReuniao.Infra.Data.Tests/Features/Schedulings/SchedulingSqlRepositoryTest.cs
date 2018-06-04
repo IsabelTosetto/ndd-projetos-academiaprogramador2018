@@ -19,8 +19,8 @@ namespace SalaDeReuniao.Infra.Data.Tests.Features.Schedulings
     public class SchedulingSqlRepositoryTest
     {
         private ISchedulingRepository _repository;
-        private Mock<Employee> _mockEmployee;
-        private Mock<Room> _mockRoom;
+        private Employee _employee;
+        private Room _room;
 
         [SetUp]
         public void Initialize()
@@ -28,8 +28,8 @@ namespace SalaDeReuniao.Infra.Data.Tests.Features.Schedulings
             BaseSqlTest.SeedDatabase();
             _repository = new SchedulingSqlRepository();
 
-            _mockEmployee = new Mock<Employee>();
-            _mockRoom = new Mock<Room>();
+            _employee = ObjectMother.GetEmployee();
+            _room = ObjectMother.GetRoom();
         }
 
         [Test]
@@ -37,11 +37,10 @@ namespace SalaDeReuniao.Infra.Data.Tests.Features.Schedulings
         {
             //Cenário
             Scheduling scheduling = ObjectMother.GetScheduling();
-            scheduling.Employee = _mockEmployee.Object;
-            _mockEmployee.Object.Id = 1;
-            scheduling.Room = _mockRoom.Object;
-            _mockRoom.Object.Id = 1;
-            _mockRoom.Object.Disponibility = true;
+            scheduling.Employee = _employee;
+            _employee.Id = 1;
+            scheduling.Room = _room;
+            _room.Id = 1;
 
             //Ação
             Scheduling result = _repository.Save(scheduling);
@@ -56,8 +55,8 @@ namespace SalaDeReuniao.Infra.Data.Tests.Features.Schedulings
         {
             //Cenário
             Scheduling scheduling = ObjectMother.GetScheduling();
-            scheduling.Employee = _mockEmployee.Object;
-            _mockEmployee.Object.Id = 1;
+            scheduling.Employee = _employee;
+            _employee.Id = 1;
 
             //Ação
             Action comparison = () => _repository.Save(scheduling);
@@ -152,6 +151,21 @@ namespace SalaDeReuniao.Infra.Data.Tests.Features.Schedulings
 
             //Verifica
             comparison.Should().Throw<IdentifierUndefinedException>();
+        }
+
+        [Test]
+        public void SchedulingSqlRepository_CheckAvailableRoom_ShouldBeOk()
+        {
+            //Cenário 
+            Scheduling scheduling = ObjectMother.GetScheduling();
+            scheduling.Employee = _employee;
+            scheduling.Room = _room;
+
+            //Ação
+            var result = _repository.CheckAvailableRoom(scheduling);
+
+            //Verificar
+            result.Should().Be(false);
         }
     }
 }

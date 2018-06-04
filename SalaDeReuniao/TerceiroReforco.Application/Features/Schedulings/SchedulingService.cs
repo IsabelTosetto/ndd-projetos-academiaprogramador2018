@@ -54,5 +54,10 @@ namespace TerceiroReforco.Application.Features.Schedulings
 
             _repository.Delete(scheduling);
         }
+
+        public bool CheckAvailableRoom(Scheduling scheduling)
+        {
+            return _repository.CheckAvailableRoom(scheduling);
+        }
     }
 }
