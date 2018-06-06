@@ -13,6 +13,5 @@ namespace TerceiroReforco.Domain.Features.Schedulings
         Scheduling Get(long id);
         IEnumerable<Scheduling> GetAll();
         bool Delete(Scheduling scheduling);
-        bool CheckAvailableRoom(Scheduling scheduling);
     }
 }

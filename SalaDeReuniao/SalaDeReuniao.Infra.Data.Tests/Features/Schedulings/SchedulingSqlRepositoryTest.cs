@@ -152,20 +152,5 @@ namespace SalaDeReuniao.Infra.Data.Tests.Features.Schedulings
             //Verifica
             comparison.Should().Throw<IdentifierUndefinedException>();
         }
-
-        [Test]
-        public void SchedulingSqlRepository_CheckAvailableRoom_ShouldBeOk()
-        {
-            //Cenário 
-            Scheduling scheduling = ObjectMother.GetScheduling();
-            scheduling.Employee = _employee;
-            scheduling.Room = _room;
-
-            //Ação
-            var result = _repository.CheckAvailableRoom(scheduling);
-
-            //Verificar
-            result.Should().Be(false);
-        }
     }
 }

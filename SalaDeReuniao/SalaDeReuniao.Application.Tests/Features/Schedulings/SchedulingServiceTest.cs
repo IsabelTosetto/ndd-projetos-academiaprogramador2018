@@ -223,14 +223,20 @@ namespace SalaDeReuniao.Application.Tests.Features.Schedulings
             _mockRoom.Object.Disponibility = true;
 
             _mockRepository
-               .Setup(m => m.CheckAvailableRoom(scheduling)).Returns(false); ;
+                .Setup(m => m.GetAll())
+                .Returns(new List<Scheduling>()
+                        {
+                            new Scheduling { Id = 1 },
+                            new Scheduling { Id = 2 },
+                            new Scheduling { Id = 3 }
+                        });
 
             //Ação
             var result = _service.CheckAvailableRoom(scheduling);
 
             //Verificar
             result.Should().Be(false);
-            _mockRepository.Verify(m => m.CheckAvailableRoom(scheduling));
+            _mockRepository.Verify(m => m.GetAll());
         }
     }
 }
