@@ -29,9 +29,6 @@ namespace TerceiroReforco.Domain.Features.Schedulings
 
             if (Room == null)
                 throw new SchedulingNullRoomException();
-
-            if (Room.Disponibility == false)
-                throw new SchedulingUnavailableRoomException();
         }
 
         public bool CompareStartTimeSmallerCurrent(DateTime dt)
@@ -50,15 +47,6 @@ namespace TerceiroReforco.Domain.Features.Schedulings
             if (result <= 0)
             {
                 return true;
-            }
-            return false;
-        }
-
-        public bool CompareSmallerEndTime(DateTime dt)
-        {
-            if (dt.Hour < EndTime.Hour)
-            {
-                return true; //menor que a hora final
             }
             return false;
         }

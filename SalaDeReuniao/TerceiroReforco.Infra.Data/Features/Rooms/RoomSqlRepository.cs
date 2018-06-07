@@ -15,7 +15,7 @@ namespace TerceiroReforco.Infra.Data.Features.Rooms
         {
             room.Validate();
 
-            string sql = "INSERT INTO TBRoom (Name,NumberOfSeats,Disponibility) VALUES (@Name, @NumberOfSeats, @Disponibility)";
+            string sql = "INSERT INTO TBRoom (Name,NumberOfSeats) VALUES (@Name, @NumberOfSeats)";
 
             room.Id = Db.Insert(sql, Take(room, false));
 
@@ -29,7 +29,7 @@ namespace TerceiroReforco.Infra.Data.Features.Rooms
 
             room.Validate();
 
-            string sql = "UPDATE TBRoom SET Name = @Name, NumberOfSeats = @NumberOfSeats, Disponibility = @Disponibility WHERE Id = @Id";
+            string sql = "UPDATE TBRoom SET Name = @Name, NumberOfSeats = @NumberOfSeats WHERE Id = @Id";
 
             Db.Update(sql, Take(room));
 
@@ -72,8 +72,7 @@ namespace TerceiroReforco.Infra.Data.Features.Rooms
            {
                Id = Convert.ToInt32(reader["Id"]),
                Name = reader["Name"].ToString(),
-               NumberOfSeats = Convert.ToInt32(reader["NumberOfSeats"]),
-               Disponibility = Convert.ToBoolean(reader["Disponibility"])
+               NumberOfSeats = Convert.ToInt32(reader["NumberOfSeats"])
            };
 
         /// <summary>
@@ -91,7 +90,6 @@ namespace TerceiroReforco.Infra.Data.Features.Rooms
                     {
                 "@Name", room.Name,
                 "@NumberOfSeats", room.NumberOfSeats,
-                "@Disponibility", room.Disponibility,
                 "@Id", room.Id,
                     };
             }
@@ -100,8 +98,7 @@ namespace TerceiroReforco.Infra.Data.Features.Rooms
                 parametros = new object[]
               {
                 "@Name", room.Name,
-                "@NumberOfSeats", room.NumberOfSeats,
-                "@Disponibility", room.Disponibility
+                "@NumberOfSeats", room.NumberOfSeats
               };
             }
             return parametros;

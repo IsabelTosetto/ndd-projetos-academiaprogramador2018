@@ -34,7 +34,6 @@ namespace SalaDeReuniao.Domain.Tests.Features.Schedulings
             scheduling.Id = 0;
             scheduling.Employee = _mockEmployee.Object;
             scheduling.Room = _mockRoom.Object;
-            _mockRoom.Object.Disponibility = true;
 
             //Ação
             Action comparison = scheduling.Validate;
@@ -51,7 +50,6 @@ namespace SalaDeReuniao.Domain.Tests.Features.Schedulings
             scheduling.Id = 0;
             scheduling.Employee = _mockEmployee.Object;
             scheduling.Room = _mockRoom.Object;
-            _mockRoom.Object.Disponibility = true;
 
             //Ação
             Action comparison = scheduling.Validate;
@@ -68,7 +66,6 @@ namespace SalaDeReuniao.Domain.Tests.Features.Schedulings
             scheduling.Id = 0;
             scheduling.Employee = _mockEmployee.Object;
             scheduling.Room = _mockRoom.Object;
-            _mockRoom.Object.Disponibility = true;
 
             //Ação
             Action comparison = scheduling.Validate;
@@ -84,7 +81,6 @@ namespace SalaDeReuniao.Domain.Tests.Features.Schedulings
             Scheduling scheduling = ObjectMother.GetScheduling();
             scheduling.Id = 0;
             scheduling.Room = _mockRoom.Object;
-            _mockRoom.Object.Disponibility = true;
 
             //Ação
             Action comparison = scheduling.Validate;
@@ -100,30 +96,12 @@ namespace SalaDeReuniao.Domain.Tests.Features.Schedulings
             Scheduling scheduling = ObjectMother.GetScheduling();
             scheduling.Id = 0;
             scheduling.Employee = _mockEmployee.Object;
-            _mockRoom.Object.Disponibility = true;
 
             //Ação
             Action comparison = scheduling.Validate;
 
             //Verifica
             comparison.Should().Throw<SchedulingNullRoomException>();
-        }
-
-        [Test]
-        public void Scheduling_UnavailableRoom_ShouldBeFail()
-        {
-            //Cenário
-            Scheduling scheduling = ObjectMother.GetScheduling();
-            scheduling.Id = 0;
-            scheduling.Employee = _mockEmployee.Object;
-            scheduling.Room = _mockRoom.Object;
-            _mockRoom.Object.Disponibility = false;
-
-            //Ação
-            Action comparison = scheduling.Validate;
-
-            //Verifica
-            comparison.Should().Throw<SchedulingUnavailableRoomException>();
         }
 
         [Test]

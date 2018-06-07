@@ -16,8 +16,8 @@ namespace SalaDeReuniao.Common.Tests.Base
 
         private const string INSERT_EMPLOYEE = "INSERT INTO TBEmployee(Name,Position,Branch) " +
             "VALUES ('Luciane', 'Cargo', 'Ramal')";
-        private const string INSERT_ROOM = "INSERT INTO TBRoom (Name,NumberOfSeats,Disponibility) VALUES ('Treinamento', 30, 1)";
-        private const string INSERT_SCHEDULING = "INSERT INTO TBScheduling(StartTime,EndTime,EmployeeId,RoomId) VALUES ('2018-10-23', '2018-10-23', 1, 1)";
+        private const string INSERT_ROOM = "INSERT INTO TBRoom (Name,NumberOfSeats) VALUES ('Treinamento', 30)";
+        private const string INSERT_SCHEDULING = "INSERT INTO TBScheduling(StartTime,EndTime,EmployeeId,RoomId) VALUES ('2018-10-23 20:00:00', '2018-10-23 22:00:00', 1, 1)";
         
         public static void SeedDatabase()
         {

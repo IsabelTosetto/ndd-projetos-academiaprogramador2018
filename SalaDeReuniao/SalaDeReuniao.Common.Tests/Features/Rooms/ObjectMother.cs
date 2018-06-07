@@ -14,8 +14,7 @@ namespace SalaDeReuniao.Common.Tests.Base
             return new Room()
             {
                 Name = "Treinamento",
-                NumberOfSeats = 30,
-                Disponibility = true
+                NumberOfSeats = 30
             };
         }
 
@@ -24,8 +23,7 @@ namespace SalaDeReuniao.Common.Tests.Base
             return new Room()
             {
                 Name = "",
-                NumberOfSeats = 30,
-                Disponibility = true
+                NumberOfSeats = 30
             };
         }
 
@@ -34,8 +32,7 @@ namespace SalaDeReuniao.Common.Tests.Base
             return new Room()
             {
                 Name = "Treinamento",
-                NumberOfSeats = 0,
-                Disponibility = true
+                NumberOfSeats = 0
             };
         }
     }

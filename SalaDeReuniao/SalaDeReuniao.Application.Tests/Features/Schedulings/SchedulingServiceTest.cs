@@ -41,11 +41,23 @@ namespace SalaDeReuniao.Application.Tests.Features.Schedulings
             Scheduling scheduling = ObjectMother.GetScheduling();
             scheduling.Employee = _mockEmployee.Object;
             scheduling.Room = _mockRoom.Object;
-            _mockRoom.Object.Disponibility = true;
 
             _mockRepository
                 .Setup(m => m.Save(scheduling))
                 .Returns(new Scheduling { Id = 1 });
+
+            Scheduling retorno = new Scheduling()
+            {
+                StartTime = new DateTime(2018, 6, 23, 7, 0, 0),
+                EndTime = new DateTime(2018, 6, 23, 10, 0, 0)
+            };
+
+        _mockRepository
+               .Setup(m => m.GetAll())
+               .Returns(new List<Scheduling>
+               {
+                   retorno
+               });
 
             // Ação
             Scheduling result = _service.Add(scheduling);
@@ -54,6 +66,32 @@ namespace SalaDeReuniao.Application.Tests.Features.Schedulings
             result.Should().NotBeNull();
             result.Id.Should().BeGreaterThan(0);
             _mockRepository.Verify(m => m.Save(scheduling));
+        }
+
+        [Test]
+        public void SchedulingService_Add_UnavailableRoom_ShouldBeOk()
+        {
+            // Cenário
+            Scheduling scheduling = new Scheduling()
+            {
+                StartTime = new DateTime(2018, 10, 23, 21, 0, 0),
+                EndTime = new DateTime(2018, 10, 23, 22, 0, 0)
+            };
+            scheduling.Employee = _mockEmployee.Object;
+            scheduling.Room = _mockRoom.Object;
+
+            _mockRepository
+               .Setup(m => m.GetAll())
+               .Returns(new List<Scheduling>
+               {
+                   scheduling
+               });
+
+            // Ação
+            Action action = () => _service.Add(scheduling);
+
+            // Verifica
+            action.Should().Throw<SchedulingUnavailableRoomException>();
         }
 
         [Test]
@@ -80,11 +118,23 @@ namespace SalaDeReuniao.Application.Tests.Features.Schedulings
             scheduling.Id = 1;
             scheduling.Employee = _mockEmployee.Object;
             scheduling.Room = _mockRoom.Object;
-            _mockRoom.Object.Disponibility = true;
 
             _mockRepository
                 .Setup(m => m.Update(scheduling))
-                .Returns(new Scheduling { Id = 1});
+                .Returns(new Scheduling { Id = 1 });
+
+            Scheduling retorno = new Scheduling()
+            {
+                StartTime = new DateTime(2018, 6, 23, 7, 0, 0),
+                EndTime = new DateTime(2018, 6, 23, 10, 0, 0)
+            };
+
+            _mockRepository
+                   .Setup(m => m.GetAll())
+                   .Returns(new List<Scheduling>
+                   {
+                   retorno
+                   });
 
             // Ação
             Scheduling result = _service.Update(scheduling);
@@ -93,6 +143,33 @@ namespace SalaDeReuniao.Application.Tests.Features.Schedulings
             result.Should().NotBeNull();
             result.Id.Should().BeGreaterThan(0);
             _mockRepository.Verify(m => m.Update(scheduling));
+        }
+
+        [Test]
+        public void SchedulingService_Update_UnavailableRoom_ShouldBeOk()
+        {
+            // Cenário
+            Scheduling scheduling = ObjectMother.GetScheduling();
+            scheduling.Id = 1;
+            scheduling.Employee = _mockEmployee.Object;
+            scheduling.Room = _mockRoom.Object;
+
+            _mockRepository
+                .Setup(m => m.Update(scheduling))
+                .Returns(new Scheduling { Id = 1 });
+
+            _mockRepository
+                   .Setup(m => m.GetAll())
+                   .Returns(new List<Scheduling>
+                   {
+                   scheduling
+                   });
+
+            // Ação
+            Action action = () => _service.Update(scheduling);
+
+            // Verifica
+            action.Should().Throw<SchedulingUnavailableRoomException>();
         }
 
         [Test]
@@ -212,31 +289,30 @@ namespace SalaDeReuniao.Application.Tests.Features.Schedulings
             _mockRepository.VerifyNoOtherCalls();
         }
 
-        [Test]
-        public void SchedulingService_CheckAvailableRoom_ShouldBeOk()
-        {
-            //Cenário 
-            Scheduling scheduling = ObjectMother.GetScheduling();
-            scheduling.Id = 1;
-            scheduling.Employee = _mockEmployee.Object;
-            scheduling.Room = _mockRoom.Object;
-            _mockRoom.Object.Disponibility = true;
+        //[Test]
+        //public void SchedulingService_CheckAvailableRoom_ShouldBeOk()
+        //{
+        //    //Cenário 
+        //    Scheduling scheduling = ObjectMother.GetScheduling();
+        //    scheduling.Id = 1;
+        //    scheduling.Employee = _mockEmployee.Object;
+        //    scheduling.Room = _mockRoom.Object;
 
-            _mockRepository
-                .Setup(m => m.GetAll())
-                .Returns(new List<Scheduling>()
-                        {
-                            new Scheduling { Id = 1 },
-                            new Scheduling { Id = 2 },
-                            new Scheduling { Id = 3 }
-                        });
+        //    _mockRepository
+        //        .Setup(m => m.GetAll())
+        //        .Returns(new List<Scheduling>()
+        //                {
+        //                    new Scheduling { Id = 1 },
+        //                    new Scheduling { Id = 2 },
+        //                    new Scheduling { Id = 3 }
+        //                });
 
-            //Ação
-            var result = _service.CheckAvailableRoom(scheduling);
+        //    //Ação
+        //    var result = _service.CheckAvailableRoom(scheduling);
 
-            //Verificar
-            result.Should().Be(false);
-            _mockRepository.Verify(m => m.GetAll());
-        }
+        //    //Verificar
+        //    result.Should().Be(false);
+        //    _mockRepository.Verify(m => m.GetAll());
+        //}
     }
 }

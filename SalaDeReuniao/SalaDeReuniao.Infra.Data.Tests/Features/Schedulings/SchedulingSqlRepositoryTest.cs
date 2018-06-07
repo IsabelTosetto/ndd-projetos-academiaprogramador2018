@@ -72,7 +72,6 @@ namespace SalaDeReuniao.Infra.Data.Tests.Features.Schedulings
             Scheduling scheduling = _repository.Get(1);
             DateTime oldStartTime = scheduling.StartTime;
             scheduling.StartTime = new DateTime(2018, 6, 10, 7, 0, 0);
-            scheduling.Room.Disponibility = true;
 
             //Ação
             Scheduling result = _repository.Update(scheduling);
