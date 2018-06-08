@@ -69,7 +69,7 @@ namespace SalaDeReuniao.Application.Tests.Features.Schedulings
         }
 
         [Test]
-        public void SchedulingService_Add_UnavailableRoom_ShouldBeOk()
+        public void SchedulingService_Add_UnavailableRoom_ShouldBeFail()
         {
             // Cenário
             Scheduling scheduling = new Scheduling()
@@ -289,30 +289,28 @@ namespace SalaDeReuniao.Application.Tests.Features.Schedulings
             _mockRepository.VerifyNoOtherCalls();
         }
 
-        //[Test]
-        //public void SchedulingService_CheckAvailableRoom_ShouldBeOk()
-        //{
-        //    //Cenário 
-        //    Scheduling scheduling = ObjectMother.GetScheduling();
-        //    scheduling.Id = 1;
-        //    scheduling.Employee = _mockEmployee.Object;
-        //    scheduling.Room = _mockRoom.Object;
+        [Test]
+        public void SchedulingService_CheckAvailableRoom_ShouldBeFail()
+        {
+            //Cenário 
+            Scheduling scheduling = ObjectMother.GetScheduling();
+            scheduling.Id = 1;
+            scheduling.Employee = _mockEmployee.Object;
+            scheduling.Room = _mockRoom.Object;
 
-        //    _mockRepository
-        //        .Setup(m => m.GetAll())
-        //        .Returns(new List<Scheduling>()
-        //                {
-        //                    new Scheduling { Id = 1 },
-        //                    new Scheduling { Id = 2 },
-        //                    new Scheduling { Id = 3 }
-        //                });
+            _mockRepository
+                .Setup(m => m.GetAll())
+                .Returns(new List<Scheduling>()
+                        {
+                            scheduling
+                        });
 
-        //    //Ação
-        //    var result = _service.CheckAvailableRoom(scheduling);
+            //Ação
+            Action action = () => _service.CheckAvailableRoom(scheduling);
 
-        //    //Verificar
-        //    result.Should().Be(false);
-        //    _mockRepository.Verify(m => m.GetAll());
-        //}
+            //Verificar
+            action.Should().Throw<SchedulingUnavailableRoomException>();
+            _mockRepository.Verify(m => m.GetAll());
+        }
     }
 }

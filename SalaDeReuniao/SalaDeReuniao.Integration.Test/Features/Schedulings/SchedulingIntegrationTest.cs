@@ -52,6 +52,27 @@ namespace SalaDeReuniao.Integration.Test.Features.Schedulings
             result.Id.Should().BeGreaterThan(0);
         }
 
+        [Test]
+        public void SchedulingIntegration_Add_UnavailableRoom_ShouldBeFail()
+        {
+            // Cenário
+            Scheduling scheduling = _service.Get(1);
+            //Scheduling scheduling = new Scheduling()
+            //{
+            //    StartTime = new DateTime(2018, 10, 23, 20, 0, 0),
+            //    EndTime = new DateTime(2018, 10, 23, 22, 0, 0)
+            //};
+            //scheduling.Employee = _employee;
+            //scheduling.Room = _room;
+            //_service.Add(scheduling);
+
+            // Ação
+            Action action = () => _service.Add(scheduling);
+
+            // Verifica
+            action.Should().Throw<SchedulingUnavailableRoomException>();
+        }
+
         [Order(2)]
         [Test]
         public void SchedulingIntegration_Add_InvalidEmptyOrNullName_ShouldBeFail()
