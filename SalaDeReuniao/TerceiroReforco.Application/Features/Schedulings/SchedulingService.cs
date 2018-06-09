@@ -65,7 +65,7 @@ namespace TerceiroReforco.Application.Features.Schedulings
 
             foreach (Scheduling s in schedulings)
             {
-                if (s.Room == scheduling.Room)
+                if (s.Room.Id == scheduling.Room.Id)
                 {
                     if (s.StartTime.Day == scheduling.StartTime.Day)
                     {

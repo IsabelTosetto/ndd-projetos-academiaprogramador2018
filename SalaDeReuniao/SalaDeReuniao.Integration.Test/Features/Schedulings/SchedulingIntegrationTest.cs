@@ -52,19 +52,12 @@ namespace SalaDeReuniao.Integration.Test.Features.Schedulings
             result.Id.Should().BeGreaterThan(0);
         }
 
+        [Order(2)]
         [Test]
         public void SchedulingIntegration_Add_UnavailableRoom_ShouldBeFail()
         {
             // Cenário
             Scheduling scheduling = _service.Get(1);
-            //Scheduling scheduling = new Scheduling()
-            //{
-            //    StartTime = new DateTime(2018, 10, 23, 20, 0, 0),
-            //    EndTime = new DateTime(2018, 10, 23, 22, 0, 0)
-            //};
-            //scheduling.Employee = _employee;
-            //scheduling.Room = _room;
-            //_service.Add(scheduling);
 
             // Ação
             Action action = () => _service.Add(scheduling);
@@ -73,7 +66,7 @@ namespace SalaDeReuniao.Integration.Test.Features.Schedulings
             action.Should().Throw<SchedulingUnavailableRoomException>();
         }
 
-        [Order(2)]
+        [Order(3)]
         [Test]
         public void SchedulingIntegration_Add_InvalidEmptyOrNullName_ShouldBeFail()
         {
@@ -87,7 +80,7 @@ namespace SalaDeReuniao.Integration.Test.Features.Schedulings
             executeAction.Should().Throw<SchedulingStartTimeOverFlowException>();
         }
 
-        [Order(3)]
+        [Order(4)]
         [Test]
         public void SchedulingIntegration_Update_ShouldBeOk()
         {
@@ -105,7 +98,21 @@ namespace SalaDeReuniao.Integration.Test.Features.Schedulings
             result.StartTime.Should().NotBe(oldStartTime);
         }
 
-        [Order(4)]
+        [Order(5)]
+        [Test]
+        public void SchedulingIntegration_Update_UnavailableRoom_ShouldBeFail()
+        {
+            // Cenário
+            Scheduling scheduling = _service.Get(1);
+
+            // Ação
+            Action action = () => _service.Update(scheduling);
+
+            // Verifica
+            action.Should().Throw<SchedulingUnavailableRoomException>();
+        }
+
+        [Order(6)]
         [Test]
         public void SchedulingIntegration_Update_InvalidId_ShouldBeFail()
         {
@@ -119,7 +126,7 @@ namespace SalaDeReuniao.Integration.Test.Features.Schedulings
             executeAction.Should().Throw<IdentifierUndefinedException>();
         }
 
-        [Order(5)]
+        [Order(7)]
         [Test]
         public void SchedulingIntegration_Get_ShouldBeOk()
         {
@@ -133,7 +140,7 @@ namespace SalaDeReuniao.Integration.Test.Features.Schedulings
             scheduling.Should().NotBeNull();
         }
 
-        [Order(6)]
+        [Order(8)]
         [Test]
         public void SchedulingIntegration_Get_InvalidId_ShouldBeOk()
         {
@@ -144,7 +151,7 @@ namespace SalaDeReuniao.Integration.Test.Features.Schedulings
             executeAction.Should().Throw<IdentifierUndefinedException>();
         }
 
-        [Order(7)]
+        [Order(9)]
         [Test]
         public void SchedulingIntegration_GetAll_ShouldBeOk()
         {
@@ -155,7 +162,7 @@ namespace SalaDeReuniao.Integration.Test.Features.Schedulings
             schedulings.Count().Should().Equals(1);
         }
 
-        [Order(8)]
+        [Order(10)]
         [Test]
         public void SchedulingIntegration_Delete_ShouldBeOk()
         {
@@ -170,7 +177,7 @@ namespace SalaDeReuniao.Integration.Test.Features.Schedulings
             result.Should().BeNull();
         }
 
-        [Order(9)]
+        [Order(11)]
         [Test]
         public void SchedulingIntegration_Delete_InvalidId_ShouldBeOk()
         {
